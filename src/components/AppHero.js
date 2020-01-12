@@ -7,15 +7,15 @@ function AppHero({ mobile, title, subheading, backgroundImageUrl }) {
     <div
       style={{
         alignItems: `center`,
-        backgroundAttachment: 'fixed',
+        // backgroundAttachment: 'fixed',
         backgroundImage: `url(${backgroundImageUrl})`,
-        backgroundPosition: `bottom`,
+        backgroundPosition: `center`,
         backgroundSize: `cover`,
         display: `flex`,
-        height: '400px',
         justifyContent: `center`,
         marginBottom: `5rem`,
         width: '100vw',
+        height: '80vh',
       }}
     >
       <Container>

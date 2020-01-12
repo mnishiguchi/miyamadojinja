@@ -2,17 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Menu } from 'semantic-ui-react';
 
-import logo from '../img/aokabe.svg'
-
 function NavMenuItems() {
   return (
     <>
-      <Menu.Item as={Link} to={'/'}>
-        <img src={logo} alt="logo" style={{ width: '32px'}} />
-      </Menu.Item>
-      <Menu.Item as={Link} to={'/b1'}>
-        b1
-      </Menu.Item>
       <Menu.Item as={Link} to={'/b2'}>
         b2
       </Menu.Item>

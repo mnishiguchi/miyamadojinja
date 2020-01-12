@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import {
   Button,
@@ -12,6 +13,7 @@ import {
 } from 'semantic-ui-react';
 
 import NavMenuItems from './NavMenuItems';
+import LogoLink from './LogoLink';
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined';
@@ -24,11 +26,12 @@ function ContainerForMobile({ HeroComponent, MenuItemsComponent, children }) {
   const hideSidebar = () => setMenuOpened(false);
   const showSidebar = () => setMenuOpened(true);
 
+  // Specifiy the breakpoint in maxWidth.
   return (
     <Responsive
       as={Sidebar.Pushable}
       getWidth={getWidth}
-      maxWidth={Responsive.onlyMobile.maxWidth}
+      maxWidth={Responsive.onlyTablet.maxWidth}
     >
       <Sidebar
         as={Menu}
@@ -39,27 +42,47 @@ function ContainerForMobile({ HeroComponent, MenuItemsComponent, children }) {
         visible={sidebarOpened}
         direction="right"
       >
+        <Button
+          icon="times"
+          basic
+          color="grey"
+          onClick={hideSidebar}
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            right: '1rem',
+          }}
+        />
+        <div style={{ paddingTop: '5rem' }}>
+          <Menu.Item as={Link} to={'/'} content="Home" />
+        </div>
+
         {MenuItemsComponent && MenuItemsComponent}
       </Sidebar>
 
       <Sidebar.Pusher dimmed={sidebarOpened} direction="right">
         <Segment
           inverted
-          textAlign="center"
           style={{
-            minHeight: HeroComponent ? 350 : 'inherit',
-            padding: '1em 0em',
+            padding: '0.5rem',
           }}
           vertical
         >
-          <Container style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button icon basic color="teal" onClick={showSidebar}>
-              <Icon name="sidebar" />
-            </Button>
-          </Container>
-
-          {HeroComponent && HeroComponent}
+          <LogoLink width="200px" />
+          <Button
+            icon="sidebar"
+            basic
+            color="grey"
+            onClick={showSidebar}
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+            }}
+          />
         </Segment>
+
+        {HeroComponent && HeroComponent}
 
         {children}
       </Sidebar.Pusher>
@@ -67,14 +90,15 @@ function ContainerForMobile({ HeroComponent, MenuItemsComponent, children }) {
   );
 }
 
-function ContainerForDesktop({ HeroComponent, MenuItemsComponent, children }) {
+function ContainerForDesktop({ MenuItemsComponent, children }) {
   const [isMenuOpened, setMenuOpened] = React.useState(false);
 
   const hideMenu = () => setMenuOpened(false);
   const showMenu = () => setMenuOpened(true);
 
+  // Specifiy the breakpoint in minWidth.
   return (
-    <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+    <Responsive getWidth={getWidth} minWidth={Responsive.onlyComputer.minWidth}>
       <Visibility
         once={false}
         onBottomPassed={showMenu}
@@ -82,10 +106,8 @@ function ContainerForDesktop({ HeroComponent, MenuItemsComponent, children }) {
       >
         <Segment
           inverted
-          textAlign="center"
           style={{
-            minHeight: HeroComponent ? 700 : 'inherit',
-            padding: '1em 0em',
+            minHeight: 'inherit',
           }}
           vertical
         >
@@ -96,10 +118,12 @@ function ContainerForDesktop({ HeroComponent, MenuItemsComponent, children }) {
             secondary={!isMenuOpened}
             size="large"
           >
-            <Container>{MenuItemsComponent}</Container>
-          </Menu>
+            <Container>
+              <LogoLink width="200px" />
 
-          {HeroComponent}
+              {MenuItemsComponent}
+            </Container>
+          </Menu>
         </Segment>
       </Visibility>
 
