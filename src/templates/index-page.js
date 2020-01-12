@@ -5,7 +5,6 @@ import { Container, Header, Segment } from 'semantic-ui-react';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-import AppHero from '../components/AppHero';
 import IntroBlurbs from '../components/IntroBlurbs';
 
 export function IndexPageTemplate({
@@ -25,10 +24,19 @@ export function IndexPageTemplate({
     <>
       <SEO title={title} description={description} />
 
-      <AppHero
-        title={title}
-        subheading={subheading}
-        backgroundImageUrl={backgroundImageUrl}
+      <div
+        style={{
+          alignItems: `center`,
+          // backgroundAttachment: 'fixed',
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundPosition: `center`,
+          backgroundSize: `cover`,
+          display: `flex`,
+          justifyContent: `center`,
+          marginBottom: `5rem`,
+          width: '100vw',
+          height: '80vh',
+        }}
       />
 
       <Container>

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {
   Button,
   Container,
-  Icon,
   Menu,
   Responsive,
   Segment,

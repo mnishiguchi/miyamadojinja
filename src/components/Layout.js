@@ -8,7 +8,14 @@ import BackToTopLink from './BackToTopLink';
 import useSiteMetadata from './useSiteMetadata';
 
 function TemplateWrapper({ children }) {
-  const { title, description } = useSiteMetadata();
+  const {
+    title,
+    description,
+    email,
+    phone,
+    phoneIntl,
+    address,
+  } = useSiteMetadata();
   return (
     <ResponsiveContainer>
       {/* prettier-ignore */}
@@ -51,7 +58,13 @@ function TemplateWrapper({ children }) {
           <Header as="h4" inverted>
             © {new Date().getFullYear()} {title}
           </Header>
-          <p>{description}</p>
+          <address>
+            鎮座地: {address}
+            <br />
+            Email: <a href={`mailto:${email}`}>{email}</a>
+            <br />
+            Tel: <a href={`tel:${phoneIntl}`}>{phone}</a>
+          </address>
           <span style={{ float: 'right' }}>
             <BackToTopLink />
           </span>

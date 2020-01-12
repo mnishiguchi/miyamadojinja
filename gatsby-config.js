@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Miyamoado Jinja',
+    title: '海山道神社',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      '海山道開運稲荷さまは海でも山でも道をきり開いて開運を運んで下さる尊いお稲荷さまということで、お金やお客様を運べば商売繁盛、車や船を運んで交通安全・海上安全・旅行安全、筆を運んで受験合格・就職出世成功、その他縁結、子授、安産、病気平癒、借金取り等道を切り開いて都合よくお運びいただく開運諸願成就のあしどめ稲荷さまです。',
+    address: '〒510-0845 三重県四日市市海山道町1丁目62',
+    phone: '059-345-5419',
+    phoneIntl: '+81593455419',
+    email: 'miyamado@m7.cty-net.ne.jp',
     author: 'mnishiguchi',
   },
   plugins: [

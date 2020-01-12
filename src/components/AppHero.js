@@ -7,7 +7,7 @@ function AppHero({ mobile, title, subheading, backgroundImageUrl }) {
     <div
       style={{
         alignItems: `center`,
-        // backgroundAttachment: 'fixed',
+        backgroundAttachment: 'fixed',
         backgroundImage: `url(${backgroundImageUrl})`,
         backgroundPosition: `center`,
         backgroundSize: `cover`,
