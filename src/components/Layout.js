@@ -1,11 +1,12 @@
 import React from 'react';
 import { withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Container, Header, List, Segment } from 'semantic-ui-react';
+import { Container, Divider, Grid, List, Segment } from 'semantic-ui-react';
 
 import ResponsiveContainer from './ResponsiveContainer';
 import BackToTopLink from './BackToTopLink';
 import useSiteMetadata from './useSiteMetadata';
+import LogoLink from './LogoLink';
 
 function TemplateWrapper({ children }) {
   const {
@@ -56,26 +57,36 @@ function TemplateWrapper({ children }) {
         style={{ padding: '5rem 0rem 2rem 0rem' }}
       >
         <Container>
-          <Header as="h4" inverted>
-            © {new Date().getFullYear()} {title}
-          </Header>
-          <List as="address" link inverted>
-            <List.Item>
-              鎮座地:{' '}
-              <a href={gmap} target="_blank" rel="noopener noreferrer">
-                {address}
-              </a>
-            </List.Item>
-            <List.Item>
-              電話: <a href={`tel:${phoneIntl}`}>{phone}</a>
-            </List.Item>
-            <List.Item>
-              Email: <a href={`mailto:${email}`}>{email}</a>
-            </List.Item>
-          </List>
-          <span style={{ float: 'right' }}>
-            <BackToTopLink />
-          </span>
+          <Grid columns="equal" inverted stackable>
+            <Grid.Row>
+              <Grid.Column>
+                <LogoLink width="300px" />
+              </Grid.Column>
+              <Grid.Column>
+                <List as="address" link inverted>
+                  <List.Item>
+                    鎮座地:{' '}
+                    <a href={gmap} target="_blank" rel="noopener noreferrer">
+                      {address}
+                    </a>
+                  </List.Item>
+                  <List.Item>
+                    電話: <a href={`tel:${phoneIntl}`}>{phone}</a>
+                  </List.Item>
+                  <List.Item>
+                    Email: <a href={`mailto:${email}`}>{email}</a>
+                  </List.Item>
+                  <Divider></Divider>
+                  <List.Item>
+                    © {new Date().getFullYear()} {title}
+                  </List.Item>
+                </List>
+                <span style={{ float: 'right' }}>
+                  <BackToTopLink />
+                </span>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </Container>
       </Segment>
     </ResponsiveContainer>
