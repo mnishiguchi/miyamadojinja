@@ -6,7 +6,6 @@ import { Container, Header, Segment } from 'semantic-ui-react';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import AppHero from '../components/AppHero';
-import BlogRoll from '../components/BlogRoll';
 import IntroBlurbs from '../components/IntroBlurbs';
 
 export function IndexPageTemplate({
@@ -53,11 +52,6 @@ export function IndexPageTemplate({
 
         <Segment style={{ padding: '5rem 0' }} vertical>
           <IntroBlurbs introBlurbs={intro.blurbs} />
-        </Segment>
-
-        <Segment style={{ padding: '5rem 0' }} vertical>
-          <h2>Latest stories</h2>
-          <BlogRoll />
         </Segment>
       </Container>
     </>

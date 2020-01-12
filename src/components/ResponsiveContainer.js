@@ -32,7 +32,7 @@ function ContainerForMobile({ HeroComponent, MenuItemsComponent, children }) {
     >
       <Sidebar
         as={Menu}
-        animation="push"
+        animation="overlay"
         inverted
         onHide={hideSidebar}
         vertical

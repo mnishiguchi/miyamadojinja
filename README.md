@@ -1,5 +1,5 @@
 <h1 align="center">
-  Miyamoado Jinja
+  Miyamado Jinja
 </h1>
 
 This project was bootstrapped with [Gatsby](https://www.gatsbyjs.org/).
