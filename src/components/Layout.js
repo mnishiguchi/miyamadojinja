@@ -1,7 +1,7 @@
 import React from 'react';
 import { withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Container, Header, Segment } from 'semantic-ui-react';
+import { Container, Header, List, Segment } from 'semantic-ui-react';
 
 import ResponsiveContainer from './ResponsiveContainer';
 import BackToTopLink from './BackToTopLink';
@@ -15,6 +15,7 @@ function TemplateWrapper({ children }) {
     phone,
     phoneIntl,
     address,
+    gmap,
   } = useSiteMetadata();
   return (
     <ResponsiveContainer>
@@ -52,19 +53,26 @@ function TemplateWrapper({ children }) {
         inverted
         vertical
         clearing
-        style={{ padding: '5em 0em' }}
+        style={{ padding: '5rem 0rem 2rem 0rem' }}
       >
         <Container>
           <Header as="h4" inverted>
             © {new Date().getFullYear()} {title}
           </Header>
-          <address>
-            鎮座地: {address}
-            <br />
-            Email: <a href={`mailto:${email}`}>{email}</a>
-            <br />
-            Tel: <a href={`tel:${phoneIntl}`}>{phone}</a>
-          </address>
+          <List as="address" link inverted>
+            <List.Item>
+              鎮座地:{' '}
+              <a href={gmap} target="_blank" rel="noopener noreferrer">
+                {address}
+              </a>
+            </List.Item>
+            <List.Item>
+              電話: <a href={`tel:${phoneIntl}`}>{phone}</a>
+            </List.Item>
+            <List.Item>
+              Email: <a href={`mailto:${email}`}>{email}</a>
+            </List.Item>
+          </List>
           <span style={{ float: 'right' }}>
             <BackToTopLink />
           </span>

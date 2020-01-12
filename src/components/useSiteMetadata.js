@@ -13,6 +13,7 @@ const useSiteMetadata = () => {
             phone
             phoneIntl
             author
+            gmap
           }
         }
       }
