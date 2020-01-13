@@ -1,7 +1,15 @@
 import React from 'react';
 import { withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Container, Divider, Grid, List, Segment } from 'semantic-ui-react';
+import {
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Icon,
+  List,
+  Segment,
+} from 'semantic-ui-react';
 
 import ResponsiveContainer from './ResponsiveContainer';
 import BackToTopLink from './BackToTopLink';
@@ -17,6 +25,9 @@ function TemplateWrapper({ children }) {
     phoneIntl,
     address,
     gmap,
+    facebook,
+    instagram,
+    navigation,
   } = useSiteMetadata();
   return (
     <ResponsiveContainer>
@@ -48,6 +59,46 @@ function TemplateWrapper({ children }) {
       </Helmet>
 
       <main style={{ minHeight: '80vh' }}>{children}</main>
+
+      <Segment padded vertical>
+        <Container>
+          <Button basic color="blue" as="a" href={`mailto:${email}`}>
+            <Icon name="mail" /> Eメール
+          </Button>
+          <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
+            <Icon name="phone" />
+            　電話
+          </Button>
+          <Button
+            basic
+            color="orange"
+            as="a"
+            href={navigation}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="car" /> ナビ
+          </Button>
+          <Button
+            color="facebook"
+            as="a"
+            href={facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="facebook" /> フェイスブック
+          </Button>
+          <Button
+            color="instagram"
+            as="a"
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="instagram" /> インスタグラム
+          </Button>
+        </Container>
+      </Segment>
 
       <Segment
         as="footer"

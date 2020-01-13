@@ -14,6 +14,9 @@ const useSiteMetadata = () => {
             phoneIntl
             author
             gmap
+            facebook
+            instagram
+            navigation
           }
         }
       }
