@@ -105,10 +105,10 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
       >
         <Segment
           inverted
-          style={{
-            minHeight: 'inherit',
-          }}
           vertical
+          style={{
+            padding: '0.8rem',
+          }}
         >
           <Menu
             fixed={isMenuOpened ? 'top' : null}
@@ -117,11 +117,9 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
             secondary={!isMenuOpened}
             size="large"
           >
-            <Container>
-              <LogoLink width="200px" />
+            <LogoLink width="200px" />
 
-              {MenuItemsComponent}
-            </Container>
+            {MenuItemsComponent}
           </Menu>
         </Segment>
       </Visibility>

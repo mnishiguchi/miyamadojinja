@@ -5,26 +5,19 @@ import { Menu } from 'semantic-ui-react';
 function NavMenuItems() {
   return (
     <>
-      <Menu.Item as={Link} to={'/b2'}>
-        b2
-      </Menu.Item>
-      <Menu.Item as={Link} to={'/b3'}>
-        b3
-      </Menu.Item>
-      <Menu.Item as={Link} to={'/404'}>
-        404
-      </Menu.Item>
-      <Menu.Item as={Link} to={'/wrong'}>
-        wrong
-      </Menu.Item>
-      <Menu.Item as="a" href={'/admin'}>
-        admin
-      </Menu.Item>
-      {process.env.NODE_ENV === 'development' && (
-        <Menu.Item as="a" href="http://localhost:8000/___graphql">
-          Graphql
-        </Menu.Item>
-      )}
+      {/* TODO: Make corresponding routes and pages */}
+      <Menu.Item as={Link} to={'/狐の嫁入り神事'} content={`狐の嫁入り神事`} />
+      <Menu.Item as={Link} to={'/結婚式'} content={`結婚式`} />
+      <Menu.Item
+        as={Link}
+        to={'/御祈祷・出張祭典'}
+        content={`御祈祷・出張祭典`}
+      />
+      <Menu.Item as={Link} to={'/授与品'} content={`授与品`} />
+      <Menu.Item as={Link} to={'/境内案内'} content={`境内案内`} />
+      <Menu.Item as={Link} to={'/朔日参り'} content={`朔日参り`} />
+      <Menu.Item as={Link} to={'/年間行事'} content={`年間行事`} />
+      <Menu.Item as={Link} to={'/交通案内'} content={`交通案内`} />
     </>
   );
 }
