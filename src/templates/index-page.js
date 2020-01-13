@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Container, Header, Segment } from 'semantic-ui-react';
+import { Container, Segment } from 'semantic-ui-react';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
@@ -12,7 +12,6 @@ export function IndexPageTemplate({
   title,
   heading,
   subheading,
-  mainpitch,
   description,
   intro,
 }) {
@@ -33,32 +32,17 @@ export function IndexPageTemplate({
           backgroundSize: `cover`,
           display: `flex`,
           justifyContent: `center`,
-          marginBottom: `5rem`,
           width: '100vw',
           height: '80vh',
         }}
       />
 
       <Container>
-        <Segment style={{ padding: '5rem 0' }} vertical>
-          <Container text>
-            <Header as="h2" style={{ fontSize: '2em' }}>
-              {mainpitch.title}
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>{mainpitch.description}</p>
-          </Container>
+        <Segment padded="very" vertical>
+          <p style={{ fontSize: '1.5rem', lineHeight: '1.8' }}>{description}</p>
         </Segment>
 
-        <Segment style={{ padding: '5rem 0' }} vertical>
-          <Container text>
-            <Header as="h1" style={{ fontSize: '3rem' }}>
-              {heading}
-            </Header>
-            <p style={{ fontSize: '2.5rem' }}>{description}</p>
-          </Container>
-        </Segment>
-
-        <Segment style={{ padding: '5rem 0' }} vertical>
+        <Segment padded="very" vertical>
           <IntroBlurbs introBlurbs={intro.blurbs} />
         </Segment>
       </Container>
@@ -71,7 +55,6 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -88,7 +71,6 @@ function IndexPage({ data }) {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -120,10 +102,6 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
         description
         intro {
           blurbs {

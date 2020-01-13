@@ -54,7 +54,7 @@ function TemplateWrapper({ children }) {
         inverted
         vertical
         clearing
-        style={{ padding: '5rem 0rem 2rem 0rem' }}
+        style={{ padding: '5rem 0 1rem 0' }}
       >
         <Container>
           <Grid columns="equal" inverted stackable>
@@ -78,12 +78,21 @@ function TemplateWrapper({ children }) {
                   </List.Item>
                   <Divider></Divider>
                   <List.Item>
-                    © {new Date().getFullYear()} {title}
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                      }}
+                    >
+                      <span>
+                        © {new Date().getFullYear()} {title}
+                      </span>
+                      <span>
+                        <BackToTopLink />
+                      </span>
+                    </div>
                   </List.Item>
                 </List>
-                <span style={{ float: 'right' }}>
-                  <BackToTopLink />
-                </span>
               </Grid.Column>
             </Grid.Row>
           </Grid>
