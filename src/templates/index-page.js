@@ -109,7 +109,6 @@ export function IndexPageTemplate({
             <PlaceHolderIntroBlurbRow header={`境内案内`} />
             <PlaceHolderIntroBlurbRow header={`朔日参り`} />
             <PlaceHolderIntroBlurbRow header={`年間行事`} />
-            <PlaceHolderIntroBlurbRow header={`交通案内`} />
           </Grid>
         </Segment>
       </Container>

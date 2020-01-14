@@ -60,14 +60,14 @@ function TemplateWrapper({ children }) {
 
       <main style={{ minHeight: '80vh' }}>{children}</main>
 
-      <Segment padded vertical>
+      <Segment vertical>
         <Container>
           <Button basic color="blue" as="a" href={`mailto:${email}`}>
-            <Icon name="mail" /> Eメール
+            <Icon name="mail" />
+            Eメール
           </Button>
           <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
-            <Icon name="phone" />
-            　電話
+            <Icon name="phone" /> 電話
           </Button>
           <Button
             basic
@@ -77,8 +77,14 @@ function TemplateWrapper({ children }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="car" /> ナビ
+            <Icon name="car" />
+            交通案内
           </Button>
+        </Container>
+      </Segment>
+
+      <Segment vertical>
+        <Container>
           <Button
             color="facebook"
             as="a"
@@ -86,7 +92,8 @@ function TemplateWrapper({ children }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="facebook" /> フェイスブック
+            <Icon name="facebook" />
+            フェイスブック
           </Button>
           <Button
             color="instagram"
@@ -95,7 +102,8 @@ function TemplateWrapper({ children }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="instagram" /> インスタグラム
+            <Icon name="instagram" />
+            インスタグラム
           </Button>
         </Container>
       </Segment>
