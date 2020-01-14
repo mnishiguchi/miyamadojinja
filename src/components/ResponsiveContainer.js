@@ -63,7 +63,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
           }}
         />
         <div style={{ paddingTop: '5rem' }}>
-          <Menu.Item as={Link} to={'/'} content="Home" />
+          <Menu.Item as={Link} to={'/'} content="ホーム" />
         </div>
 
         {MenuItemsComponent}
@@ -77,15 +77,6 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
         </Menu.Item>
 
         <Menu.Item>
-          <Button.Group vertical fluid>
-            <Button basic color="grey" as="a" href={`tel:${phoneIntl}`}>
-              <Icon name="phone" /> お電話
-            </Button>
-            <Button basic color="grey" as="a" href={`mailto:${email}`}>
-              <Icon name="mail" /> Eメール
-            </Button>
-          </Button.Group>
-          <Divider />
           <Button.Group vertical fluid>
             <Button
               color="facebook"
@@ -108,6 +99,16 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
             >
               <Icon name="instagram" />
               インスタグラム
+            </Button>
+          </Button.Group>
+          <Divider />
+          <p>お問合せ</p>
+          <Button.Group vertical fluid>
+            <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
+              <Icon name="phone" /> お電話
+            </Button>
+            <Button basic color="teal" as="a" href={`mailto:${email}`}>
+              <Icon name="mail" /> Eメール
             </Button>
           </Button.Group>
         </Menu.Item>

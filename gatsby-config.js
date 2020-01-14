@@ -72,6 +72,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `海山道神社`,
+        short_name: `海山道神社`,
+        start_url: `/`,
+        background_color: `#000`,
+        theme_color: `#c33`,
+        display: `standalone`,
+        icon: 'src/img/logo.svg',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,

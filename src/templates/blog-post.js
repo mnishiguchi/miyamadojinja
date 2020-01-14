@@ -17,7 +17,7 @@ export function BlogPostTemplate({
   const PostContent = contentComponent || Content;
 
   return (
-    <Container style={{ marginTop: '5rem', marginBottom: '5rem' }}>
+    <Container style={{ marginTop: '3rem', marginBottom: '3rem' }}>
       <SEO title={title} description={description} />
 
       <h1>{title}</h1>
