@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Container, Grid, Header, List, Segment } from 'semantic-ui-react';
+import Media from 'react-media';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
@@ -39,19 +40,23 @@ export function IndexPageTemplate({
     <>
       <SEO title={title} description={description} />
 
-      <div
-        style={{
-          alignItems: `center`,
-          // backgroundAttachment: 'fixed',
-          backgroundImage: `url(${backgroundImageUrl})`,
-          backgroundPosition: `center`,
-          backgroundSize: `cover`,
-          display: `flex`,
-          justifyContent: `center`,
-          width: '100vw',
-          height: '80vh',
-        }}
-      />
+      <Media query={{ maxWidth: 599 }}>
+        {matches => (
+          <div
+            style={{
+              alignItems: `center`,
+              // backgroundAttachment: 'fixed',
+              backgroundImage: `url(${backgroundImageUrl})`,
+              backgroundPosition: `center`,
+              backgroundSize: `cover`,
+              display: `flex`,
+              justifyContent: `center`,
+              width: '100vw',
+              height: matches ? '50vh' : '80vh',
+            }}
+          />
+        )}
+      </Media>
 
       <Container>
         <Segment padded="very" vertical>
