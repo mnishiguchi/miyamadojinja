@@ -29,7 +29,7 @@ export function IndexPageTemplate({
   heading,
   subheading,
   description,
-  intro,
+  // intro,
 }) {
   const backgroundImageUrl = !!image.childImageSharp
     ? image.childImageSharp.fluid.src
@@ -122,9 +122,9 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  // }),
 };
 
 function IndexPage({ data }) {
@@ -138,7 +138,7 @@ function IndexPage({ data }) {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        // intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -169,20 +169,20 @@ export const pageQuery = graphql`
         heading
         subheading
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
+        # intro {
+        #   blurbs {
+        #     image {
+        #       childImageSharp {
+        #         fluid(maxWidth: 240, quality: 64) {
+        #           ...GatsbyImageSharpFluid
+        #         }
+        #       }
+        #     }
+        #     text
+        #   }
+        #   heading
+        #   description
+        # }
       }
     }
   }
