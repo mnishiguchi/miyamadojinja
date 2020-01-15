@@ -1,29 +1,31 @@
 ---
 templateKey: catalog-page
-title: 授与品
+title: おふだ・お守り
 date: 2020-01-13T00:00:00.000Z
 description:
 categories:
-  - title: お札
+  - title: おふだ
     description: 当社神職が、手作業で謹製しています。初穂料は各１体７００円です。
   - title: お守り
     description: 安産守り・縁結び守りなど掲載以外にも各種お守りがございます。
+  - title: 授与品
+    description:
 catalogItems:
   - image: /img/ofuda-water.jpg
     title: 水引
-    category: お札
+    category: おふだ
   - image: /img/ofuda-business.jpg
     title: 商売繁盛
-    category: お札
+    category: おふだ
   - image: /img/ofuda-traffic.jpg
     title: 交通安全
-    category: お札
+    category: おふだ
   - image: /img/ofuda-theft.jpg
     title: 盗難除け
-    category: お札
+    category: おふだ
   - image: /img/ofuda-fishing.jpg
     title: 大漁
-    category: お札
+    category: おふだ
   - image: /img/omamori-shugo.jpg
     title: 守護守
     description: 小さいお守りで人気があります。
@@ -64,4 +66,16 @@ catalogItems:
     title: おみくじたまご
     description: たまごの殻を割ると中からおみくじが出てきます。かわいいと評判のたのしいおみくじです。
     category: お守り
+  - image: /img/omiyage-2902.jpg
+    title:
+    description:
+    category: 授与品
+  - image: /img/omiyage-2912.jpg
+    title:
+    description:
+    category: 授与品
+  - image: /img/omiyage-2913.jpg
+    title:
+    description:
+    category: 授与品
 ---

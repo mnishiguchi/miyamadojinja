@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import {
   Container,
   Grid,
@@ -57,7 +57,11 @@ export function IndexPageTemplate({
         <Segment padded="very" vertical clearing>
           <Header as="h2">由緒</Header>
           <p style={{ fontSize: '1.33em' }}>
-            当社は、洲崎濱宮神明神社（すざきはまみやしんめいじんじゃ）の境内社で海山道開運稲荷神社と称し、丁度、前社は伊勢の内宮さま、後社は外宮さまに当り、境内社の方が著名であるのは誠に尊いことです。
+            当社は、
+            <Link to="shinmeisha">
+              洲崎濱宮神明神社（すざきはまみやしんめいじんじゃ）
+            </Link>
+            の境内社で海山道開運稲荷神社と称し、丁度、前社は伊勢の内宮さま、後社は外宮さまに当り、境内社の方が著名であるのは誠に尊いことです。
           </p>
           <Image
             src={`img/logo-miyamado-san-text.jpg`}
