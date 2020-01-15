@@ -103,11 +103,11 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
           </Button.Group>
           <Divider />
           <p>お問合せ</p>
-          <Button.Group vertical fluid>
-            <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
+          <Button.Group vertical fluid inverted>
+            <Button basic inverted as="a" href={`tel:${phoneIntl}`}>
               <Icon name="phone" /> お電話
             </Button>
-            <Button basic color="teal" as="a" href={`mailto:${email}`}>
+            <Button basic inverted as="a" href={`mailto:${email}`}>
               <Icon name="mail" /> Eメール
             </Button>
           </Button.Group>

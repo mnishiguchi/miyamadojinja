@@ -113,9 +113,17 @@ function TemplateWrapper({ children }) {
         as="footer"
         inverted
         vertical
-        clearing
         style={{ padding: '5rem 0 1rem 0' }}
       >
+        <span
+          style={{
+            position: 'absolute',
+            bottom: '5rem',
+            right: '1rem',
+          }}
+        >
+          <BackToTopLink />
+        </span>
         <Container>
           <Grid columns="equal" inverted stackable>
             <Grid.Row>
@@ -146,9 +154,6 @@ function TemplateWrapper({ children }) {
                     >
                       <span>
                         © {new Date().getFullYear()} {title}
-                      </span>
-                      <span>
-                        <BackToTopLink />
                       </span>
                     </div>
                   </List.Item>
