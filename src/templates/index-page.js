@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import {
+  Card,
   Container,
   Grid,
   Header,
@@ -48,11 +49,7 @@ export function IndexPageTemplate({ image, title, description }) {
         <Segment padded="very" vertical clearing>
           <Header as="h2">由緒</Header>
           <p style={{ fontSize: '1.33em' }}>
-            当社は、
-            <Link to="shinmeisha">
-              洲崎濱宮神明神社（すざきはまみやしんめいじんじゃ）
-            </Link>
-            の境内社で海山道開運稲荷神社と称し、丁度、前社は伊勢の内宮さま、後社は外宮さまに当り、境内社の方が著名であるのは誠に尊いことです。
+            当社は、洲崎濱宮神明神社（すざきはまみやしんめいじんじゃ）の境内社で海山道開運稲荷神社と称し、丁度、前社は伊勢の内宮さま、後社は外宮さまに当り、境内社の方が著名であるのは誠に尊いことです。
           </p>
           <Image
             src={`img/logo-miyamado-san-text.jpg`}
@@ -69,8 +66,41 @@ export function IndexPageTemplate({ image, title, description }) {
         <Segment padded="very" vertical>
           <Grid stackable>
             <Grid.Row>
-              <Grid.Column width={10}>
-                <Header as="h2">ご祭神</Header>
+              <Grid.Column width={8}>
+                <Image src={`img/shinmeisha.jpg`} size="large" />
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <Header as="h2">洲崎濱宮神明神社 御祭神</Header>
+                <List
+                  style={{ fontSize: '1.33em' }}
+                  items={[
+                    '面足命',
+                    '天照大御神',
+                    '惶根神',
+                    '仁徳天皇',
+                    '建速須佐之男命',
+                    '宇迦之御魂神',
+                    '大山祇命',
+                    '火之迦具土神',
+                    '菅原道真公',
+                    '火産霊神',
+                    '保食神',
+                    '倭姫命',
+                  ]}
+                />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
+
+        <Segment padded="very" vertical>
+          <Grid stackable>
+            <Grid.Row>
+              <Grid.Column width={8}>
+                <Image src={`img/torii-2875-1.jpg`} size="large" />
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <Header as="h2">海山道開運稲荷神社 御祭神</Header>
                 <List
                   style={{ fontSize: '1.33em' }}
                   items={[
@@ -82,11 +112,43 @@ export function IndexPageTemplate({ image, title, description }) {
                   ]}
                 />
               </Grid.Column>
-              <Grid.Column width={6}>
-                <Image src={`img/torii-2875-1.jpg`} size="large" />
-              </Grid.Column>
             </Grid.Row>
           </Grid>
+        </Segment>
+
+        <Segment padded="very" vertical>
+          <Media query={{ maxWidth: 599 }}>
+            {matches => (
+              <Card.Group
+                centered
+                items={[
+                  {
+                    header: '日本一の大きさの杉一木彫刻大天神像',
+                    image: 'img/tenjinzo.jpg',
+                    fluid: matches,
+                    as: Link,
+                    to: '/tenjinzo',
+                  },
+                  {
+                    header: '狐の嫁入り神事',
+                    image: 'img/setsubun-101.jpg',
+                    fluid: matches,
+
+                    as: Link,
+                    to: '/yomeiri',
+                  },
+                  {
+                    header: '祭礼市（朔日市場）',
+                    image: 'img/saireiichi-101.jpg',
+                    fluid: matches,
+
+                    as: Link,
+                    to: '/saireiichi',
+                  },
+                ]}
+              />
+            )}
+          </Media>
         </Segment>
       </Container>
     </>
