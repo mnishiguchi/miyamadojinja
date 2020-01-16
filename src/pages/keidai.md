@@ -1,9 +1,9 @@
 ---
-templateKey: blog-post
+templateKey: keidai-page
 title: 境内案内
-date: 2020-01-13T00:00:00.000Z
 description:
----
+image: /img/honden-0006.jpg
+----
 
 [http://www.miyamado-jinja.com/keidaiannai.htm](http://www.miyamado-jinja.com/keidaiannai.htm)
 

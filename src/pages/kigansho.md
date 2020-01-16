@@ -5,4 +5,4 @@ date: 2020-01-13T00:00:00.000Z
 description:
 ---
 
-[http://www.miyamado-jinja.com/kigansyo.htm](http://www.miyamado-jinja.com/kigansyo.htm)
+![](/img/kigansho.jpg)

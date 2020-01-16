@@ -13,16 +13,8 @@ import Media from 'react-media';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-// import IntroBlurbs from '../components/IntroBlurbs';
 
-export function IndexPageTemplate({
-  image,
-  title,
-  description,
-  // heading,
-  // subheading,
-  // intro,
-}) {
+export function IndexPageTemplate({ image, title, description }) {
   const backgroundImageUrl = !!image.childImageSharp
     ? image.childImageSharp.fluid.src
     : image;
@@ -36,7 +28,6 @@ export function IndexPageTemplate({
           <div
             style={{
               alignItems: `center`,
-              // backgroundAttachment: 'fixed',
               backgroundImage: `url(${backgroundImageUrl})`,
               backgroundPosition: `center`,
               backgroundSize: `cover`,
@@ -97,10 +88,6 @@ export function IndexPageTemplate({
             </Grid.Row>
           </Grid>
         </Segment>
-
-        {/* <Segment padded="very" vertical>
-          <IntroBlurbs introBlurbs={intro.blurbs} />
-        </Segment> */}
       </Container>
     </>
   );
@@ -110,11 +97,6 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   description: PropTypes.string,
-  // heading: PropTypes.string,
-  // subheading: PropTypes.string,
-  // intro: PropTypes.shape({
-  //   blurbs: PropTypes.array,
-  // }),
 };
 
 function IndexPage({ data }) {
@@ -126,9 +108,6 @@ function IndexPage({ data }) {
         image={frontmatter.image}
         title={frontmatter.title}
         description={frontmatter.description}
-        // heading={frontmatter.heading}
-        // subheading={frontmatter.subheading}
-        // intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -157,22 +136,6 @@ export const pageQuery = graphql`
           }
         }
         description
-        # heading
-        # subheading
-        # intro {
-        #   blurbs {
-        #     image {
-        #       childImageSharp {
-        #         fluid(maxWidth: 240, quality: 64) {
-        #           ...GatsbyImageSharpFluid
-        #         }
-        #       }
-        #     }
-        #     text
-        #   }
-        #   heading
-        #   description
-        # }
       }
     }
   }
