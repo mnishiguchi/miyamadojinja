@@ -6,6 +6,7 @@ import {
   Container,
   Divider,
   Grid,
+  Header,
   Icon,
   List,
   Segment,
@@ -61,60 +62,23 @@ function TemplateWrapper({ children }) {
 
       <main style={{ minHeight: '80vh' }}>{children}</main>
 
-      <Segment vertical>
+      <Segment secondary vertical padded="very">
         <Container>
-          <Button basic color="blue" as="a" href={`mailto:${email}`}>
-            <Icon name="mail" />
-            Eメール
-          </Button>
-          <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
-            <Icon name="phone" /> 電話
-          </Button>
-          <Button
-            basic
-            color="orange"
-            as="a"
-            href={navigation}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="car" />
-            交通案内
-          </Button>
+          <Header as="h2">お問合せはこちら</Header>
+          <Button.Group fluid>
+            <Button basic color="blue" as="a" href={`mailto:${email}`}>
+              <Icon name="mail" />
+              {email}
+            </Button>
+
+            <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
+              <Icon name="phone" /> {phone}
+            </Button>
+          </Button.Group>
         </Container>
       </Segment>
 
-      <Segment vertical>
-        <Container>
-          <Button
-            color="facebook"
-            as="a"
-            href={facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="facebook" />
-            フェイスブック
-          </Button>
-          <Button
-            color="instagram"
-            as="a"
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="instagram" />
-            インスタグラム
-          </Button>
-        </Container>
-      </Segment>
-
-      <Segment
-        as="footer"
-        inverted
-        vertical
-        style={{ padding: '5rem 0 1rem 0' }}
-      >
+      <Segment as="footer" inverted vertical style={{ padding: '5rem 0' }}>
         <span
           style={{
             position: 'absolute',
@@ -139,13 +103,7 @@ function TemplateWrapper({ children }) {
                       {address}
                     </a>
                   </List.Item>
-                  <List.Item>
-                    電話: <a href={`tel:${phoneIntl}`}>{phone}</a>
-                  </List.Item>
-                  <List.Item>
-                    Email: <a href={`mailto:${email}`}>{email}</a>
-                  </List.Item>
-                  <Divider></Divider>
+                  <Divider hidden />
                   <List.Item>
                     <div
                       style={{

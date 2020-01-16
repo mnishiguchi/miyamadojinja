@@ -78,31 +78,29 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
         </Menu.Item>
 
         <Menu.Item>
-          <Button.Group vertical fluid>
-            <Button
-              color="facebook"
-              as="a"
-              href={facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              fluid
-            >
-              <Icon name="facebook" />
-              フェイスブック
-            </Button>
-            <Button
-              color="instagram"
-              as="a"
-              href={instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              fluid
-            >
-              <Icon name="instagram" />
-              インスタグラム
-            </Button>
-          </Button.Group>
-          <Divider />
+          <Button
+            color="instagram"
+            as="a"
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            circular
+            size="large"
+            icon="instagram"
+          />
+          <Button
+            color="facebook"
+            as="a"
+            href={facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            circular
+            size="large"
+            icon="facebook"
+          />
+        </Menu.Item>
+
+        <Menu.Item>
           <p>お問合せ</p>
           <Button.Group vertical fluid inverted>
             <Button basic inverted as="a" href={`tel:${phoneIntl}`}>
@@ -150,6 +148,19 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
   const hideMenu = () => setMenuOpened(false);
   const showMenu = () => setMenuOpened(true);
 
+  const {
+    title,
+    description,
+    email,
+    phone,
+    phoneIntl,
+    address,
+    gmap,
+    facebook,
+    instagram,
+    navigation,
+  } = useSiteMetadata();
+
   // Specifiy the breakpoint in minWidth.
   return (
     <Responsive getWidth={getWidth} minWidth={Responsive.onlyComputer.minWidth}>
@@ -175,6 +186,33 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
             <LogoLink width="200px" />
 
             {MenuItemsComponent}
+
+            <Menu.Menu position="right">
+              <Menu.Item>
+                <Button
+                  circular
+                  size="small"
+                  icon="instagram"
+                  color="instagram"
+                  as="a"
+                  href={instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              </Menu.Item>
+              <Menu.Item>
+                <Button
+                  circular
+                  size="small"
+                  icon="facebook"
+                  color="facebook"
+                  as="a"
+                  href={facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              </Menu.Item>
+            </Menu.Menu>
           </Menu>
         </Segment>
       </Visibility>
