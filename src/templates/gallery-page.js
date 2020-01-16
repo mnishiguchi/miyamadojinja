@@ -24,6 +24,8 @@ export function GalleryPageTemplate({
       <h1>{title}</h1>
       <p>{description}</p>
 
+      <PostContent content={content} />
+
       <Segment vertical>
         <Grid doubling columns={3}>
           {snapshots.map(({ image, title }) => {
@@ -38,8 +40,6 @@ export function GalleryPageTemplate({
           })}
         </Grid>
       </Segment>
-
-      <PostContent content={content} />
     </Container>
   );
 }

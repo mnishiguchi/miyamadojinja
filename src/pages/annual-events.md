@@ -39,5 +39,3 @@ description:
 | １１月１５日   | 七五三祭                                     |
 | 毎月１日１５日 | 月次祭                                       |
 | 毎月９日       | 命日祭                                       |
-
-[http://www.miyamado-jinja.com/nenkangyouji.htm](http://www.miyamado-jinja.com/nenkangyouji.htm)

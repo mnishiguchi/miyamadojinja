@@ -6,5 +6,3 @@ description: >-
   神社の静かな杜に囲まれた、荘厳で厳粛な本殿式。日本の伝統、古来より受け継げられてきた美しい形でお二人の愛の誓いを・・・。
   また、開運のご神徳は、お二人の門出にふさわしいはなむけとなるでしょう。
 ---
-
-[http://www.miyamado-jinja.com/kyosiki.htm](http://www.miyamado-jinja.com/kyosiki.htm)

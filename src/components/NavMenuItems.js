@@ -10,7 +10,7 @@ function NavMenuItems() {
       <Menu.Item as={Link} to={'/kitou'} content={`御祈祷・出張祭典`} />
       <Menu.Item as={Link} to={'/omamori'} content={`おふだ・お守り`} />
       <Menu.Item as={Link} to={'/keidai'} content={`境内案内`} />
-      <Menu.Item as={Link} to={'/tsuitachi'} content={`朔日参り`} />
+      <Menu.Item as={Link} to={'/saireiichi'} content={`祭礼市（朔日市場）`} />
       <Menu.Item as={Link} to={'/annual-events'} content={`年間行事`} />
     </>
   );

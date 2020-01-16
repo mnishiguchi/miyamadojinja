@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 日本一の大天神木像　みやまど天神菅原社
+title: みやまど天神菅原社
 date: 2020-01-13T00:00:00.000Z
 description: 日本一の大きさの杉の一木彫刻大天神像（菅原道真公）です。学業・合格・芸術・習い事の上達・ボケ封じなどにご利益がございます。
 featuredimage: /img/tenjinzo.jpg
@@ -13,8 +13,6 @@ featuredimage: /img/tenjinzo.jpg
 その後に工匠が名人匠の鑿でわずか百数十日という神業をもってこの崇高な一木彫の尊像を生誕させました。
 そうして飛騨古川に安置されていた尊像を平成２０年に当社へお迎え申し上げ、今では学業成就をはじめ習い事などの諸芸上達やぼけ封じのご利益を求めて全国崇敬者の信仰をあつめています。
 
-直径：２７０ cm
-高さ：２８０ cm
-重さ：８トン
-
-[http://www.miyamado-jinja.com/tenjinzou.htm](http://www.miyamado-jinja.com/tenjinzou.htm)
+- 直径：２７０ cm
+- 高さ：２８０ cm
+- 重さ：８トン

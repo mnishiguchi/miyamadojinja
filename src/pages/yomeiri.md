@@ -15,13 +15,13 @@ snapshots:
     title: setsubun
   - image: /img/setsubun-101.jpg
     title: setsubun
-  - image: /img/setsubun-102.jpg
-    title: setsubun
   - image: /img/setsubun-104.jpg
     title: setsubun
   - image: /img/setsubun-105.jpg
     title: setsubun
 ---
+
+![](/img/setsubun-102.jpg)
 
 ## まめ知識
 
@@ -34,5 +34,3 @@ snapshots:
 ④：豆袋に入っている福くじは当日限りの引き換えとなっていますのでご注意を！
 
 ⑤：厄年の方の豆まき奉仕者を受付しております。（詳細は社務所までお問い合わせください）
-
-[http://www.miyamado-jinja.com/yomeiri.htm](http://www.miyamado-jinja.com/yomeiri.htm)
