@@ -14,6 +14,7 @@ import Media from 'react-media';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
+import KeidaiImage from '../components/KeidaiImage';
 
 export function IndexPageTemplate({ image, title, description }) {
   const backgroundImageUrl = !!image.childImageSharp
@@ -133,7 +134,6 @@ export function IndexPageTemplate({ image, title, description }) {
                     header: '狐の嫁入り神事',
                     image: 'img/setsubun-101.jpg',
                     fluid: matches,
-
                     as: Link,
                     to: '/yomeiri',
                   },
@@ -141,7 +141,6 @@ export function IndexPageTemplate({ image, title, description }) {
                     header: '祭礼市（朔日市場）',
                     image: 'img/saireiichi-101.jpg',
                     fluid: matches,
-
                     as: Link,
                     to: '/saireiichi',
                   },
@@ -149,6 +148,61 @@ export function IndexPageTemplate({ image, title, description }) {
               />
             )}
           </Media>
+        </Segment>
+
+        <Segment padded="very" vertical>
+          <Header as="h2">境内案内</Header>
+          <KeidaiImage />
+          <Segment>
+            <List horizontal celled relaxed>
+              <List.Item as={Link} to={`/shinmeisha`}>
+                洲崎濱宮神明神社
+              </List.Item>
+              <List.Item as={Link} to={`/honden`}>
+                海山道開運稲荷神社本殿
+              </List.Item>
+              <List.Item as={Link} to={`/kigansho`}>
+                (1) 交通安全祈願所
+              </List.Item>
+              <List.Item>(2) 筆　塚</List.Item>
+              <List.Item as={Link} to={`/sukeshiro`}>
+                (3) 助四郎社
+              </List.Item>
+              <List.Item>(4) 大漁社</List.Item>
+              <List.Item>(5) 八十八社</List.Item>
+              <List.Item>(6) 八鳥治太夫碑</List.Item>
+              <List.Item>(7) 報国稲荷社</List.Item>
+              <List.Item>(8) 狐　塚</List.Item>
+              <List.Item>(9) 招福社</List.Item>
+              <List.Item>(10) 足留め社</List.Item>
+              <List.Item>(11) 長谷川社・真弓社</List.Item>
+              <List.Item>(12) 熊鷹社</List.Item>
+              <List.Item>(13) 安全社</List.Item>
+              <List.Item>(14) 橿原神宮遥拝所</List.Item>
+              <List.Item>(15) 眼鏡塚</List.Item>
+              <List.Item>(16) 合格社</List.Item>
+              <List.Item>(17) 助一社</List.Item>
+              <List.Item>(18) 厄除社</List.Item>
+              <List.Item>(19) 福寿社</List.Item>
+              <List.Item>(20) 福徳社</List.Item>
+              <List.Item>(21) 必勝社</List.Item>
+              <List.Item>(22) 玉富社</List.Item>
+              <List.Item>(23) 出世五社伏見社</List.Item>
+              <List.Item>(24) 成功社</List.Item>
+              <List.Item>(25) 春熊社</List.Item>
+              <List.Item>(26) 金生社</List.Item>
+              <List.Item>(27) 福龍社</List.Item>
+              <List.Item>(28) 白龍社</List.Item>
+              <List.Item>(29) 神宮遥拝所</List.Item>
+              <List.Item>(30) 奉安庫</List.Item>
+              <List.Item>(31) 靖国神社遥拝所</List.Item>
+              <List.Item>(32) 納札所</List.Item>
+              <List.Item>(33) 豆まき舞台</List.Item>
+              <List.Item as={Link} to={`/tenjinzo`}>
+                (34) 天神菅原社
+              </List.Item>
+            </List>
+          </Segment>
         </Segment>
       </Container>
     </>
