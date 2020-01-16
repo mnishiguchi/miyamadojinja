@@ -54,6 +54,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
         <Button
           icon="times"
           basic
+          inverted
           color="grey"
           onClick={hideSidebar}
           style={{
@@ -126,6 +127,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
           <Button
             icon="sidebar"
             basic
+            inverted
             color="grey"
             onClick={showSidebar}
             style={{

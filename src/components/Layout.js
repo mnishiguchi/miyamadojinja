@@ -120,6 +120,7 @@ function TemplateWrapper({ children }) {
             position: 'absolute',
             bottom: '5rem',
             right: '1rem',
+            zIndex: 2,
           }}
         >
           <BackToTopLink />

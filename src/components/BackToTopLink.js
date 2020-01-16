@@ -6,7 +6,7 @@ import { animateScroll as scroll } from 'react-scroll';
 const onClick = () => scroll.scrollToTop({ duration: 200 });
 
 const BackToTopLink = () => {
-  return <Button circular icon={'angle up'} onClick={onClick} />;
+  return <Button basic inverted icon={'angle up'} onClick={onClick} />;
 };
 
 export default BackToTopLink;
