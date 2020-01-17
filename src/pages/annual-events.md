@@ -8,6 +8,8 @@ snapshots:
     title: shichigosan
   - image: /img/setsubun.jpg
     title: setsubun
+  - image: /img/saireiichi-3073.jpg
+    title: 祭礼市（朔日市場）
 ---
 
 - 毎月１日１５日は月次祭

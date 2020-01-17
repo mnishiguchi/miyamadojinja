@@ -136,7 +136,7 @@ export function IndexPageTemplate({ image, title, description }) {
                   {
                     header: '祭礼市（朔日市場）',
                     meta: '毎月1日',
-                    image: 'img/saireiichi-101.jpg',
+                    image: '/img/saireiichi-3073.jpg',
                     fluid: matches,
                     as: Link,
                     to: '/saireiichi',
