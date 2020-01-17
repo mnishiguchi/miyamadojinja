@@ -87,7 +87,7 @@ module.exports = {
         display: `standalone`,
       },
     },
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     {
