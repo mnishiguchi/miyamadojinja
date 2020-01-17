@@ -14,6 +14,7 @@ import Media from 'react-media';
 
 import Layout from '../components/Layout';
 import KeidaiImage from '../components/KeidaiImage';
+import miyamadosan from '../img/miyamadosan.svg';
 
 export function IndexPageTemplate({ image, title, description }) {
   const backgroundImageUrl = !!image.childImageSharp
@@ -49,11 +50,7 @@ export function IndexPageTemplate({ image, title, description }) {
           <p style={{ fontSize: '1.33em' }}>
             当社は、洲崎濱宮神明神社（すざきはまみやしんめいじんじゃ）の境内社で海山道開運稲荷神社と称し、丁度、前社は伊勢の内宮さま、後社は外宮さまに当り、境内社の方が著名であるのは誠に尊いことです。
           </p>
-          <Image
-            src={`img/logo-miyamado-san-text.jpg`}
-            size="medium"
-            floated="left"
-          />
+          <Image src={miyamadosan} size="medium" floated="left" />
           <p style={{ fontSize: '1.33em' }}>
             俗に“みやまどさん”（総称海山道神社）とよばれるのは、伊勢路の伏見稲荷総社として高遠なる御神徳を称えて此の土地の地名で代称されているのです。
             その昔、西行の「昨日たち今日立ちみれば日永なる洲崎に見ゆる森のひとむら」と詠まれたと言うそのままの森は、神々しさ自ら身に迫る思いがします。
@@ -170,7 +167,9 @@ export function IndexPageTemplate({ image, title, description }) {
               </List.Item>
               <List.Item>(4) 大漁社</List.Item>
               <List.Item>(5) 八十八社</List.Item>
-              <List.Item>(6) 八鳥治太夫碑</List.Item>
+              <List.Item as={Link} to={`/yashima`}>
+                (6) 八鳥治太夫碑
+              </List.Item>
               <List.Item>(7) 報国稲荷社</List.Item>
               <List.Item>(8) 狐　塚</List.Item>
               <List.Item>(9) 招福社</List.Item>
@@ -193,7 +192,9 @@ export function IndexPageTemplate({ image, title, description }) {
               <List.Item>(26) 金生社</List.Item>
               <List.Item>(27) 福龍社</List.Item>
               <List.Item>(28) 白龍社</List.Item>
-              <List.Item>(29) 神宮遥拝所</List.Item>
+              <List.Item as={Link} to={`/jinguyohaisho`}>
+                (29) 神宮遥拝所
+              </List.Item>
               <List.Item>(30) 奉安庫</List.Item>
               <List.Item>(31) 靖国神社遥拝所</List.Item>
               <List.Item>(32) 納札所</List.Item>

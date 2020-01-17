@@ -19,6 +19,8 @@ snapshots:
     title: setsubun
   - image: /img/setsubun-105.jpg
     title: setsubun
+  - image: /img/setsubun-mame.jpg
+    title: setsubun
 ---
 
 ![](/img/setsubun-102.jpg)

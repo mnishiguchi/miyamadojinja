@@ -16,3 +16,5 @@ featuredimage: /img/tenjinzo.jpg
 - 直径：２７０ cm
 - 高さ：２８０ cm
 - 重さ：８トン
+
+![大天神さま参道入口](/img/tenjin-entrance.jpg)
