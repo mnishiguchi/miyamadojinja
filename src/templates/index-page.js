@@ -122,7 +122,8 @@ export function IndexPageTemplate({ image, title, description }) {
                 centered
                 items={[
                   {
-                    header: '日本一の大きさの杉一木彫刻大天神像',
+                    header: '大天神像（菅原道真公）',
+                    meta: '日本一の大きさ',
                     image: 'img/tenjinzo.jpg',
                     fluid: matches,
                     as: Link,
@@ -130,6 +131,8 @@ export function IndexPageTemplate({ image, title, description }) {
                   },
                   {
                     header: '狐の嫁入り神事',
+                    meta: '節分の日',
+
                     image: 'img/setsubun-101.jpg',
                     fluid: matches,
                     as: Link,
@@ -137,6 +140,7 @@ export function IndexPageTemplate({ image, title, description }) {
                   },
                   {
                     header: '祭礼市（朔日市場）',
+                    meta: '毎月1日',
                     image: 'img/saireiichi-101.jpg',
                     fluid: matches,
                     as: Link,
