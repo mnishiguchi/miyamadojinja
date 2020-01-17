@@ -1,13 +1,12 @@
 <div align="center">
-  <h1>
-    Miyamado Jinja
-  </h1>
+  <h1>Miyamado Jinja</h1>
   <img src="https://user-images.githubusercontent.com/7563926/72620461-56b0b200-390d-11ea-99a5-9d05cbcebefb.jpg" height="300">
-</div>
 
 This project was bootstrapped with [Gatsby](https://www.gatsbyjs.org/).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8c59046e-7740-4aa1-a981-a71fbe5822c1/deploy-status)](https://app.netlify.com/sites/miyamadojinja/deploys)
+
+</div>
 
 ## 🚀 Quick start
 
