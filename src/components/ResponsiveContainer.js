@@ -81,6 +81,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
       </Sidebar>
 
       <Sidebar.Pusher dimmed={sidebarOpened} direction="right">
+        {/* mobile app header */}
         <Segment
           inverted
           style={{
@@ -123,19 +124,17 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
         onBottomPassed={showMenu}
         onBottomPassedReverse={hideMenu}
       >
-        <Segment
-          inverted
-          vertical
-          style={{
-            padding: '0.8rem',
-          }}
-        >
+        {/* desktop app header */}
+        <Segment inverted vertical>
           <Menu
             fixed={isMenuOpened ? 'top' : null}
             inverted
             pointing={!isMenuOpened}
             secondary={!isMenuOpened}
             size="large"
+            style={{
+              padding: '0.5rem',
+            }}
           >
             <LogoLink width="200px" />
 

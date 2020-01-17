@@ -22,7 +22,7 @@ export function IndexPageTemplate({ image, title, description }) {
 
   return (
     <>
-      <Media query={{ maxWidth: 599 }}>
+      <Media query={{ maxWidth: 991 }}>
         {matches => (
           <div
             style={{
@@ -33,7 +33,7 @@ export function IndexPageTemplate({ image, title, description }) {
               display: `flex`,
               justifyContent: `center`,
               width: '100vw',
-              height: matches ? '50vh' : '80vh',
+              height: matches ? '600px' : '900px',
             }}
           />
         )}

@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: 海山道神社
-image: /img/honden-0006.jpg
+image: /img/honden-3054.jpg
 # heading: 海山道神社
 # subheading: 開運·厄よけ·結び·合格の神様
 description: >-
