@@ -1,8 +1,13 @@
 ---
-templateKey: blog-post
+templateKey: gallery-page
 title: 年間行事
 date: 2020-01-13T00:00:00.000Z
 description:
+snapshots:
+  - image: /img/shichigosan.png
+    title: shichigosan
+  - image: /img/setsubun.jpg
+    title: setsubun
 ---
 
 - 毎月１日１５日は月次祭
@@ -36,6 +41,6 @@ description:
 | ４月９日       | 春季例大祭                                   |
 | ６月３０日     | 夏越の大祓（茅の輪くぐり）                   |
 | ８月９日       | 夏祭り                                       |
-| １１月１５日   | 七五三祭                                     |
+| １１月１５日   | [七五三祭](/shichigosan)                     |
 | 毎月１日１５日 | 月次祭                                       |
 | 毎月９日       | 命日祭                                       |
