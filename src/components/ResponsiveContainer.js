@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import {
   Button,
-  Divider,
   Icon,
   Menu,
   Responsive,
@@ -148,18 +147,7 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
   const hideMenu = () => setMenuOpened(false);
   const showMenu = () => setMenuOpened(true);
 
-  const {
-    title,
-    description,
-    email,
-    phone,
-    phoneIntl,
-    address,
-    gmap,
-    facebook,
-    instagram,
-    navigation,
-  } = useSiteMetadata();
+  const { facebook, instagram } = useSiteMetadata();
 
   // Specifiy the breakpoint in minWidth.
   return (

@@ -26,9 +26,6 @@ function TemplateWrapper({ children }) {
     phoneIntl,
     address,
     gmap,
-    facebook,
-    instagram,
-    navigation,
   } = useSiteMetadata();
   return (
     <ResponsiveContainer>
