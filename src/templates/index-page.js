@@ -23,8 +23,6 @@ export function IndexPageTemplate({ image, title, description }) {
 
   return (
     <>
-      <SEO title={title} description={description} />
-
       <Media query={{ maxWidth: 599 }}>
         {matches => (
           <div
