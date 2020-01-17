@@ -11,6 +11,7 @@ import {
   List,
   Segment,
 } from 'semantic-ui-react';
+import Media from 'react-media';
 
 import ResponsiveContainer from './ResponsiveContainer';
 import BackToTopLink from './BackToTopLink';
@@ -61,15 +62,30 @@ function TemplateWrapper({ children }) {
       <Segment secondary vertical padded="very">
         <Container>
           <Header as="h2">お問合せはこちら</Header>
-          <Button.Group fluid>
-            <Button basic color="blue" as="a" href={`mailto:${email}`}>
-              <Icon name="mail" />
-              Eメール
-            </Button>
-            <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
-              <Icon name="phone" /> お電話
-            </Button>
-          </Button.Group>
+          <Media query={{ maxWidth: 991 }}>
+            {matches => {
+              return matches ? (
+                <Button.Group fluid>
+                  <Button basic color="blue" as="a" href={`mailto:${email}`}>
+                    <Icon name="mail" />
+                    Eメール
+                  </Button>
+                  <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
+                    <Icon name="phone" /> お電話
+                  </Button>
+                </Button.Group>
+              ) : (
+                <List horizontal divided>
+                  <List.Item>
+                    <strong>電話</strong>: {phone}
+                  </List.Item>
+                  <List.Item>
+                    <strong>Email</strong>: {email}
+                  </List.Item>
+                </List>
+              );
+            }}
+          </Media>
         </Container>
       </Segment>
 
