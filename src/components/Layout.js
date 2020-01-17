@@ -99,6 +99,12 @@ function TemplateWrapper({ children }) {
                       {address}
                     </a>
                   </List.Item>
+                  <List.Item>
+                    電話: <a href={`tel:${phoneIntl}`}>{phone}</a>
+                  </List.Item>
+                  <List.Item>
+                    Email: <a href={`mailto:${email}`}>{email}</a>
+                  </List.Item>
                   <Divider hidden />
                   <List.Item>
                     <div
