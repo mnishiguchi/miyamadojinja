@@ -12,7 +12,6 @@ import {
 } from 'semantic-ui-react';
 import Media from 'react-media';
 
-import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import KeidaiImage from '../components/KeidaiImage';
 
@@ -132,7 +131,6 @@ export function IndexPageTemplate({ image, title, description }) {
                   {
                     header: '狐の嫁入り神事',
                     meta: '節分の日',
-
                     image: 'img/setsubun-101.jpg',
                     fluid: matches,
                     as: Link,
@@ -214,8 +212,8 @@ export function IndexPageTemplate({ image, title, description }) {
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d418628.8591278057!2d136.34374831595818!3d34.94312300000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc695f13a514d79d5!2sMiyamado%20Shrine!5e0!3m2!1sen!2sus!4v1579256375306!5m2!1sen!2sus"
             width="100%"
             height="450"
-            frameborder="0"
-            allowfullscreen=""
+            frameBorder="0"
+            allowFullScreen=""
           ></iframe>
 
           <Segment vertical>

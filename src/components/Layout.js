@@ -48,13 +48,12 @@ function TemplateWrapper({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href={`${withPrefix('/')}img/favicon-32x32.png`} />
         <link rel="icon" type="image/png" sizes="96x96" href={`${withPrefix('/')}img/favicon-96x96.png`} />
         <link rel="icon" type="image/png" sizes="16x16" href={`${withPrefix('/')}img/favicon-16x16.png`} />
-        <link rel="icon"  type="image/png" href={`${withPrefix('/')}img/favicon.ico`}/>
         <link rel="manifest" href={`${withPrefix('/')}img/manifest.json`} />
         <meta name="theme-color" content="#00000" />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta  property="og:image" content={`${withPrefix('/')}img/img/honden-0006.jpg`} />
+        <meta  property="og:image" content={`${withPrefix('/')}img/honden-0006.jpg`} />
       </Helmet>
 
       <main style={{ minHeight: '80vh' }}>{children}</main>

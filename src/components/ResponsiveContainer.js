@@ -13,6 +13,7 @@ import {
 
 import NavMenuItems from './NavMenuItems';
 import LogoLink from './LogoLink';
+import SocialButtons from './SocialButtons';
 import useSiteMetadata from './useSiteMetadata';
 
 const getWidth = () => {
@@ -23,7 +24,7 @@ const getWidth = () => {
 function ContainerForMobile({ MenuItemsComponent, children }) {
   const [sidebarOpened, setMenuOpened] = React.useState(false);
 
-  const { email, phoneIntl, facebook } = useSiteMetadata();
+  const { email, phoneIntl } = useSiteMetadata();
 
   const hideSidebar = () => setMenuOpened(false);
   const showSidebar = () => setMenuOpened(true);
@@ -63,16 +64,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
         {MenuItemsComponent}
 
         <Menu.Item>
-          <Button
-            color="facebook"
-            as="a"
-            href={facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            circular
-            size="large"
-            icon="facebook"
-          />
+          <SocialButtons />
         </Menu.Item>
 
         <Menu.Item>
@@ -123,8 +115,6 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
   const hideMenu = () => setMenuOpened(false);
   const showMenu = () => setMenuOpened(true);
 
-  const { facebook } = useSiteMetadata();
-
   // Specifiy the breakpoint in minWidth.
   return (
     <Responsive getWidth={getWidth} minWidth={Responsive.onlyComputer.minWidth}>
@@ -153,16 +143,7 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
 
             <Menu.Menu position="right">
               <Menu.Item>
-                <Button
-                  circular
-                  size="small"
-                  icon="facebook"
-                  color="facebook"
-                  as="a"
-                  href={facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
+                <SocialButtons />
               </Menu.Item>
             </Menu.Menu>
           </Menu>

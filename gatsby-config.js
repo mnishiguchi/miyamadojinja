@@ -4,6 +4,7 @@ module.exports = {
     description:
       '海山道開運稲荷さまは海でも山でも道をきり開いて開運を運んで下さる尊いお稲荷さまということで、お金やお客様を運べば商売繁盛、車や船を運んで交通安全・海上安全・旅行安全、筆を運んで受験合格・就職出世成功、その他縁結、子授、安産、病気平癒、借金取り等道を切り開いて都合よくお運びいただく開運諸願成就のあしどめ稲荷さまです。',
     address: '三重県四日市市海山道町1丁目62番地',
+    siteUrl: process.env.SITE_URL,
     gmap:
       'https://www.google.com/maps/place/Miyamado+Shrine/@34.9430372,136.6211072,18z',
     phone: '059-345-5419',
@@ -12,10 +13,9 @@ module.exports = {
     author: 'mnishiguchi',
     facebook:
       'https://www.facebook.com/pages/%E6%B5%B7%E5%B1%B1%E9%81%93%E7%A5%9E%E7%A4%BE/442688119163715',
+    instagram: 'https://www.instagram.com/miyamado_shrine/',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -68,16 +68,33 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: process.env.SITE_URL,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `海山道神社`,
-        short_name: `海山道神社`,
+        short_name: `miyamadojinja`,
         start_url: `/`,
         background_color: `#000`,
-        theme_color: `#000`,
+        theme_color: `#c33`,
         display: `standalone`,
-        icon: 'src/img/logo.svg',
+        icon: 'static/img/favicon.ico',
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
     {
