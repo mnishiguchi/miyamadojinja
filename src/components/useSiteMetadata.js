@@ -15,8 +15,6 @@ const useSiteMetadata = () => {
             author
             gmap
             facebook
-            instagram
-            navigation
           }
         }
       }

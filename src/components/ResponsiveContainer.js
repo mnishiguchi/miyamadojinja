@@ -23,13 +23,7 @@ const getWidth = () => {
 function ContainerForMobile({ MenuItemsComponent, children }) {
   const [sidebarOpened, setMenuOpened] = React.useState(false);
 
-  const {
-    email,
-    phoneIntl,
-    facebook,
-    instagram,
-    navigation,
-  } = useSiteMetadata();
+  const { email, phoneIntl, facebook } = useSiteMetadata();
 
   const hideSidebar = () => setMenuOpened(false);
   const showSidebar = () => setMenuOpened(true);
@@ -67,26 +61,8 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
         </div>
 
         {MenuItemsComponent}
-        <Menu.Item
-          as="a"
-          href={navigation}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          交通案内
-        </Menu.Item>
 
         <Menu.Item>
-          <Button
-            color="instagram"
-            as="a"
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            circular
-            size="large"
-            icon="instagram"
-          />
           <Button
             color="facebook"
             as="a"
@@ -147,7 +123,7 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
   const hideMenu = () => setMenuOpened(false);
   const showMenu = () => setMenuOpened(true);
 
-  const { facebook, instagram } = useSiteMetadata();
+  const { facebook } = useSiteMetadata();
 
   // Specifiy the breakpoint in minWidth.
   return (
@@ -176,18 +152,6 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
             {MenuItemsComponent}
 
             <Menu.Menu position="right">
-              <Menu.Item>
-                <Button
-                  circular
-                  size="small"
-                  icon="instagram"
-                  color="instagram"
-                  as="a"
-                  href={instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-              </Menu.Item>
               <Menu.Item>
                 <Button
                   circular
