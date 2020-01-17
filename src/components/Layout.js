@@ -65,11 +65,10 @@ function TemplateWrapper({ children }) {
           <Button.Group fluid>
             <Button basic color="blue" as="a" href={`mailto:${email}`}>
               <Icon name="mail" />
-              {email}
+              Eメール
             </Button>
-
             <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
-              <Icon name="phone" /> {phone}
+              <Icon name="phone" /> お電話
             </Button>
           </Button.Group>
         </Container>

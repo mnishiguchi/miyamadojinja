@@ -215,19 +215,21 @@ export function IndexPageTemplate({ image, title, description }) {
             frameborder="0"
             allowfullscreen=""
           ></iframe>
-          <Segment.Group horizontal>
-            <Segment>
-              <Header as="h3">公共交通機関でお越しのみなさまへ</Header>
-              近鉄名古屋線 海山道駅下車すぐ　改札西出口より徒歩３０秒
-              <br />
-            </Segment>
-            <Segment>
-              <Header as="h3">車でお越しのみなさまへ</Header>
-              伊勢湾岸自動車道　川越ＩＣ下車～　Ｒ２３津方面　　２０分
-              <br />
-              名阪国道　　　　　亀山ＩＣ下車～　Ｒ１四日市方面　３０分
-            </Segment>
-          </Segment.Group>
+
+          <Segment vertical>
+            <Header as="h3">公共交通機関でお越しのみなさまへ</Header>
+            近鉄名古屋線 海山道駅下車すぐ　改札西出口より徒歩３０秒
+          </Segment>
+
+          <Segment vertical>
+            <Header as="h3">伊勢湾岸自動車道でお越しのみなさまへ</Header>
+            川越ＩＣ下車　国道２３号線　津方面 ２０分
+          </Segment>
+
+          <Segment vertical>
+            <Header as="h3">名阪国道でお越しのみなさまへ</Header>
+            亀山ＩＣ下車　国道１四日市方面号線　３０分
+          </Segment>
         </Segment>
       </Container>
     </>
