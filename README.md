@@ -1,6 +1,9 @@
-<h1 align="center">
-  Miyamado Jinja
-</h1>
+<div align="center">
+  <h1>
+    Miyamado Jinja
+  </h1>
+  <img src="https://user-images.githubusercontent.com/7563926/72620461-56b0b200-390d-11ea-99a5-9d05cbcebefb.jpg" height="300">
+</div>
 
 This project was bootstrapped with [Gatsby](https://www.gatsbyjs.org/).
 
