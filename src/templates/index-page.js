@@ -197,7 +197,7 @@ export function IndexPageTemplate({ image, title, description }) {
           <Header as="h2">交通案内</Header>
           <iframe
             title="miyamadojinja"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d418628.8591278057!2d136.34374831595818!3d34.94312300000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc695f13a514d79d5!2sMiyamado%20Shrine!5e0!3m2!1sen!2sus!4v1579256375306!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d418628.197999312!2d136.3412309250019!3d34.943252499999986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60038ecd8e3d43dd%3A0xc695f13a514d79d5!2z5rW35bGx6YGT56We56S-!5e0!3m2!1sja!2sus!4v1579314598423!5m2!1sja!2sus"
             width="100%"
             height="450"
             frameBorder="0"
