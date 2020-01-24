@@ -231,12 +231,14 @@ export function IndexPageTemplate({ image, title, description }) {
           <Media
             query="(max-width: 991px)"
             render={() => (
-              <>
-                <aside className="Facebook-timeline" />
-                <Segment vertical textAlign="center">
-                  <SocialButtons />
-                </Segment>
-              </>
+              <Grid centered columns={2}>
+                <Grid.Column>
+                  <aside className="Facebook-timeline" />
+                  <Segment vertical textAlign="center">
+                    <SocialButtons />
+                  </Segment>
+                </Grid.Column>
+              </Grid>
             )}
           />
         </div>

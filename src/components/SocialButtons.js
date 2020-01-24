@@ -10,7 +10,7 @@ export default function SocialButtons() {
     <>
       <Button
         circular
-        size="small"
+        size="large"
         icon="instagram"
         color="purple"
         as="a"
@@ -18,10 +18,10 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       />
-      <span style={{ width: '.5rem' }}></span>
+      <span style={{ marginLeft: '1rem' }}></span>
       <Button
         circular
-        size="small"
+        size="large"
         icon="facebook"
         color="facebook"
         as="a"
