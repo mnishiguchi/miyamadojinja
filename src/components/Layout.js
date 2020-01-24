@@ -59,7 +59,7 @@ function TemplateWrapper({ children }) {
 
       <main style={{ minHeight: '80vh' }}>{children}</main>
 
-      <Segment secondary vertical padded="very">
+      <Segment vertical padded="very" style={{ background: '#f5f6f7' }}>
         <Container>
           <Header as="h2">お問合せはこちら</Header>
           <Media query={{ maxWidth: 991 }}>

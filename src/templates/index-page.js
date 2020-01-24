@@ -14,6 +14,7 @@ import Media from 'react-media';
 
 import Layout from '../components/Layout';
 import KeidaiImage from '../components/KeidaiImage';
+import SocialButtons from '../components/SocialButtons';
 import miyamadosan from '../img/miyamadosan.svg';
 
 export function IndexPageTemplate({ image, title, description }) {
@@ -40,119 +41,125 @@ export function IndexPageTemplate({ image, title, description }) {
         )}
       </Media>
 
-      <Container>
-        <Segment padded="very" vertical>
-          <p style={{ fontSize: '1.5rem', lineHeight: '1.7' }}>{description}</p>
-        </Segment>
+      <Container style={{ display: 'flex' }}>
+        <div style={{ flex: 1 }}>
+          <Segment padded="very" vertical>
+            <p style={{ fontSize: '1.5rem', lineHeight: '1.7' }}>
+              {description}
+            </p>
+          </Segment>
 
-        <Segment padded="very" vertical clearing>
-          <Header as="h2">由緒</Header>
-          <p style={{ fontSize: '1.33em' }}>
-            当社は、洲崎濱宮神明神社（すざきはまみやしんめいじんじゃ）の境内社で海山道開運稲荷神社と称し、丁度、前社は伊勢の内宮さま、後社は外宮さまに当り、境内社の方が著名であるのは誠に尊いことです。
-          </p>
-          <Image src={miyamadosan} size="medium" floated="left" />
-          <p style={{ fontSize: '1.33em' }}>
-            俗に“みやまどさん”（総称海山道神社）とよばれるのは、伊勢路の伏見稲荷総社として高遠なる御神徳を称えて此の土地の地名で代称されているのです。
-            その昔、西行の「昨日たち今日立ちみれば日永なる洲崎に見ゆる森のひとむら」と詠まれたと言うそのままの森は、神々しさ自ら身に迫る思いがします。
-            また、江戸時代には徳川家のあつい崇敬により葵の御紋を許され、神戸侯を始め水谷検令（代官水谷九佐衛門）等からも崇められ、古くから全国崇敬者の信仰をあつめています。
-          </p>
-        </Segment>
+          {/* <div id="Facebook-timeline" /> */}
 
-        <Segment padded="very" vertical>
-          <Grid stackable>
-            <Grid.Row>
-              <Grid.Column width={8}>
-                <Image src={`img/shinmeisha.jpg`} size="large" />
-              </Grid.Column>
-              <Grid.Column width={8}>
-                <Header as="h2">洲崎濱宮神明神社 御祭神</Header>
-                <List
-                  style={{ fontSize: '1.33em' }}
+          <Segment padded="very" vertical clearing>
+            <Header as="h2">由緒</Header>
+            <p style={{ fontSize: '1.33em' }}>
+              当社は、洲崎濱宮神明神社（すざきはまみやしんめいじんじゃ）の境内社で海山道開運稲荷神社と称し、丁度、前社は伊勢の内宮さま、後社は外宮さまに当り、境内社の方が著名であるのは誠に尊いことです。
+            </p>
+
+            <Image src={miyamadosan} size="medium" floated="left" />
+            <p style={{ fontSize: '1.33em' }}>
+              俗に“みやまどさん”（総称海山道神社）とよばれるのは、伊勢路の伏見稲荷総社として高遠なる御神徳を称えて此の土地の地名で代称されているのです。
+              その昔、西行の「昨日たち今日立ちみれば日永なる洲崎に見ゆる森のひとむら」と詠まれたと言うそのままの森は、神々しさ自ら身に迫る思いがします。
+              また、江戸時代には徳川家のあつい崇敬により葵の御紋を許され、神戸侯を始め水谷検令（代官水谷九佐衛門）等からも崇められ、古くから全国崇敬者の信仰をあつめています。
+            </p>
+          </Segment>
+
+          <Segment padded="very" vertical>
+            <Grid stackable>
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  <Image src={`img/shinmeisha.jpg`} size="large" />
+                </Grid.Column>
+                <Grid.Column width={8}>
+                  <Header as="h2">洲崎濱宮神明神社 御祭神</Header>
+                  <List
+                    style={{ fontSize: '1.33em' }}
+                    items={[
+                      '面足命',
+                      '天照大御神',
+                      '惶根神',
+                      '仁徳天皇',
+                      '建速須佐之男命',
+                      '宇迦之御魂神',
+                      '大山祇命',
+                      '火之迦具土神',
+                      '菅原道真公',
+                      '火産霊神',
+                      '保食神',
+                      '倭姫命',
+                    ]}
+                  />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
+
+          <Segment padded="very" vertical>
+            <Grid stackable>
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  <Image src={`img/torii-2875-1.jpg`} size="large" />
+                </Grid.Column>
+                <Grid.Column width={8}>
+                  <Header as="h2">海山道開運稲荷神社 御祭神</Header>
+                  <List
+                    style={{ fontSize: '1.33em' }}
+                    items={[
+                      '倉稲魂神（うがのみたま）',
+                      '大己貴命（おおなむちのみこと）',
+                      '太田神（おおたのかみ） ',
+                      '保食神（うけもちのかみ）',
+                      '大宮能売神（おおみやのめのかみ）',
+                    ]}
+                  />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
+
+          <Segment padded="very" vertical>
+            <Media query={{ maxWidth: 599 }}>
+              {matches => (
+                <Card.Group
+                  centered
                   items={[
-                    '面足命',
-                    '天照大御神',
-                    '惶根神',
-                    '仁徳天皇',
-                    '建速須佐之男命',
-                    '宇迦之御魂神',
-                    '大山祇命',
-                    '火之迦具土神',
-                    '菅原道真公',
-                    '火産霊神',
-                    '保食神',
-                    '倭姫命',
+                    {
+                      header: '大天神像（菅原道真公）',
+                      meta: '日本一の大きさ',
+                      image: 'img/tenjinzo.jpg',
+                      fluid: matches,
+                      as: Link,
+                      to: '/tenjinzo',
+                    },
+                    {
+                      header: '狐の嫁入り神事',
+                      meta: '節分の日',
+                      image: 'img/setsubun-101.jpg',
+                      fluid: matches,
+                      as: Link,
+                      to: '/yomeiri',
+                    },
+                    {
+                      header: '祭礼市（朔日市場）',
+                      meta: '毎月1日',
+                      image: '/img/saireiichi-3073.jpg',
+                      fluid: matches,
+                      as: Link,
+                      to: '/saireiichi',
+                    },
                   ]}
                 />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Segment>
+              )}
+            </Media>
+          </Segment>
 
-        <Segment padded="very" vertical>
-          <Grid stackable>
-            <Grid.Row>
-              <Grid.Column width={8}>
-                <Image src={`img/torii-2875-1.jpg`} size="large" />
-              </Grid.Column>
-              <Grid.Column width={8}>
-                <Header as="h2">海山道開運稲荷神社 御祭神</Header>
-                <List
-                  style={{ fontSize: '1.33em' }}
-                  items={[
-                    '倉稲魂神（うがのみたま）',
-                    '大己貴命（おおなむちのみこと）',
-                    '太田神（おおたのかみ） ',
-                    '保食神（うけもちのかみ）',
-                    '大宮能売神（おおみやのめのかみ）',
-                  ]}
-                />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Segment>
-
-        <Segment padded="very" vertical>
-          <Media query={{ maxWidth: 599 }}>
-            {matches => (
-              <Card.Group
-                centered
-                items={[
-                  {
-                    header: '大天神像（菅原道真公）',
-                    meta: '日本一の大きさ',
-                    image: 'img/tenjinzo.jpg',
-                    fluid: matches,
-                    as: Link,
-                    to: '/tenjinzo',
-                  },
-                  {
-                    header: '狐の嫁入り神事',
-                    meta: '節分の日',
-                    image: 'img/setsubun-101.jpg',
-                    fluid: matches,
-                    as: Link,
-                    to: '/yomeiri',
-                  },
-                  {
-                    header: '祭礼市（朔日市場）',
-                    meta: '毎月1日',
-                    image: '/img/saireiichi-3073.jpg',
-                    fluid: matches,
-                    as: Link,
-                    to: '/saireiichi',
-                  },
-                ]}
-              />
-            )}
-          </Media>
-        </Segment>
-
-        <Segment padded="very" vertical>
-          <Header as="h2">境内案内</Header>
-          <KeidaiImage />
-          <Segment>
-            {/* prettier-ignore */}
-            <List horizontal celled relaxed>
+          <Segment padded="very" vertical>
+            <Header as="h2">境内案内</Header>
+            <KeidaiImage />
+            <Segment>
+              {/* prettier-ignore */}
+              <List horizontal celled relaxed>
               <List.Item as={Link} to={`/shinmeisha`} content={`洲崎濱宮神明神社`} />
               <List.Item as={Link} to={`/honden`} content={`海山道開運稲荷神社本殿`} />
               <List.Item as={Link} to={`/kigansho`} content={`(1) 交通安全祈願所`} />
@@ -190,35 +197,60 @@ export function IndexPageTemplate({ image, title, description }) {
               <List.Item content={`(33) 豆まき舞台`} />
               <List.Item as={Link} to={`/tenjinzo`} content={`(34) 天神菅原社`} />
             </List>
-          </Segment>
-        </Segment>
-
-        <Segment padded="very" vertical>
-          <Header as="h2">交通案内</Header>
-          <iframe
-            title="miyamadojinja"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d418628.197999312!2d136.3412309250019!3d34.943252499999986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60038ecd8e3d43dd%3A0xc695f13a514d79d5!2z5rW35bGx6YGT56We56S-!5e0!3m2!1sja!2sus!4v1579314598423!5m2!1sja!2sus"
-            width="100%"
-            height="450"
-            frameBorder="0"
-            allowFullScreen=""
-          ></iframe>
-
-          <Segment vertical>
-            <Header as="h3">公共交通機関でお越しのみなさまへ</Header>
-            近鉄名古屋線 海山道駅下車すぐ　改札西出口より徒歩３０秒
+            </Segment>
           </Segment>
 
-          <Segment vertical>
-            <Header as="h3">伊勢湾岸自動車道でお越しのみなさまへ</Header>
-            川越ＩＣ下車　国道２３号線　津方面 ２０分
+          <Segment padded="very" vertical>
+            <Header as="h2">交通案内</Header>
+            <iframe
+              title="miyamadojinja"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d418628.197999312!2d136.3412309250019!3d34.943252499999986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60038ecd8e3d43dd%3A0xc695f13a514d79d5!2z5rW35bGx6YGT56We56S-!5e0!3m2!1sja!2sus!4v1579314598423!5m2!1sja!2sus"
+              width="100%"
+              height="450"
+              frameBorder="0"
+              allowFullScreen=""
+            ></iframe>
+
+            <Segment vertical>
+              <Header as="h3">公共交通機関でお越しのみなさまへ</Header>
+              近鉄名古屋線 海山道駅下車すぐ　改札西出口より徒歩３０秒
+            </Segment>
+
+            <Segment vertical>
+              <Header as="h3">伊勢湾岸自動車道でお越しのみなさまへ</Header>
+              川越ＩＣ下車　国道２３号線　津方面 ２０分
+            </Segment>
+
+            <Segment vertical>
+              <Header as="h3">名阪国道でお越しのみなさまへ</Header>
+              亀山ＩＣ下車　国道１四日市方面号線　３０分
+            </Segment>
           </Segment>
 
-          <Segment vertical>
-            <Header as="h3">名阪国道でお越しのみなさまへ</Header>
-            亀山ＩＣ下車　国道１四日市方面号線　３０分
-          </Segment>
-        </Segment>
+          {/* For mobile, show the Facebook here */}
+          <Media
+            query="(max-width: 991px)"
+            render={() => (
+              <>
+                <aside className="Facebook-timeline" />
+                <Segment vertical textAlign="center">
+                  <SocialButtons />
+                </Segment>
+              </>
+            )}
+          />
+        </div>
+
+        {/* For desktop, show the Facebook sidebar. */}
+        <Media
+          query="(min-width: 992px)"
+          render={() => (
+            <aside
+              className="Facebook-timeline"
+              style={{ marginLeft: '1rem' }}
+            />
+          )}
+        />
       </Container>
     </>
   );
