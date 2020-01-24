@@ -15,6 +15,8 @@ import Media from 'react-media';
 import Layout from '../components/Layout';
 import KeidaiImage from '../components/KeidaiImage';
 import SocialButtons from '../components/SocialButtons';
+import FacebookTimeline from '../components/FacebookTimeline';
+import GoogleMap from '../components/GoogleMap';
 import miyamadosan from '../img/miyamadosan.svg';
 
 export function IndexPageTemplate({ image, title, description }) {
@@ -202,14 +204,7 @@ export function IndexPageTemplate({ image, title, description }) {
 
           <Segment padded="very" vertical>
             <Header as="h2">交通案内</Header>
-            <iframe
-              title="miyamadojinja"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d418628.197999312!2d136.3412309250019!3d34.943252499999986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60038ecd8e3d43dd%3A0xc695f13a514d79d5!2z5rW35bGx6YGT56We56S-!5e0!3m2!1sja!2sus!4v1579314598423!5m2!1sja!2sus"
-              width="100%"
-              height="450"
-              frameBorder="0"
-              allowFullScreen=""
-            ></iframe>
+            <GoogleMap />
 
             <Segment vertical>
               <Header as="h3">公共交通機関でお越しのみなさまへ</Header>
@@ -232,9 +227,13 @@ export function IndexPageTemplate({ image, title, description }) {
             query="(max-width: 991px)"
             render={() => (
               <>
-                <Grid centered columns={2}>
-                  <aside className="Facebook-timeline" />
-                </Grid>
+                <Segment padded="very" vertical>
+                  <Grid centered columns={2}>
+                    <div>
+                      <FacebookTimeline title="FacebookTimeline-mobile" />
+                    </div>
+                  </Grid>
+                </Segment>
                 <Segment vertical textAlign="center">
                   <SocialButtons />
                 </Segment>
@@ -247,10 +246,9 @@ export function IndexPageTemplate({ image, title, description }) {
         <Media
           query="(min-width: 992px)"
           render={() => (
-            <aside
-              className="Facebook-timeline"
-              style={{ marginLeft: '1rem' }}
-            />
+            <div style={{ marginLeft: '1rem' }}>
+              <FacebookTimeline title="FacebookTimeline-desktop" />
+            </div>
           )}
         />
       </Container>

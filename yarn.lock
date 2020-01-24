@@ -6028,11 +6028,6 @@ gatsby-plugin-page-creator@^2.1.38:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-pinterest-twitter-facebook@^1.11.2:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-pinterest-twitter-facebook/-/gatsby-plugin-pinterest-twitter-facebook-1.11.2.tgz#fafc6708f204bdbc974a8c2ce3d7069bdb0ad625"
-  integrity sha512-D0Gzl7OSlvYaiKvkZ7O2137JtS/9Ul+mdYlIyHBPU1v2DR+epPvXwBj8z4/Z2A8G882yfYnFzJrvoeO8lfrXOg==
-
 gatsby-plugin-react-helmet-canonical-urls@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet-canonical-urls/-/gatsby-plugin-react-helmet-canonical-urls-1.4.0.tgz#9a0f3a6e75b0ff54c6a8e70c2bc48219903a8296"
