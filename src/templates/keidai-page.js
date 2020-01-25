@@ -6,6 +6,7 @@ import { Container } from 'semantic-ui-react';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import KeidaiContent from '../components/KeidaiContent';
 
 export function KeidaiPageTemplate({
   content,
@@ -24,6 +25,8 @@ export function KeidaiPageTemplate({
       <p>{description}</p>
 
       <PostContent content={content} />
+
+      <KeidaiContent />
     </Container>
   );
 }
