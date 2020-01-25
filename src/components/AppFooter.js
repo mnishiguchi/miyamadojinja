@@ -97,33 +97,50 @@ function AppFooter({ children }) {
                   </List.Item>
                   <Divider hidden />
                   <List.Item>
-                    <div
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <div>
-                        © {new Date().getFullYear()} {title}
-                      </div>
-                      <div style={{ marginLeft: '2rem' }}>
-                        <span
-                          style={{
-                            marginRight: '0.4rem',
-                            verticalAlign: 'top',
-                          }}
-                        >
-                          Built with
-                        </span>
+                    <List as="address" link inverted>
+                      <List.Item
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'flex-start',
+                        }}
+                      >
+                        <div>
+                          © {new Date().getFullYear()} {title}
+                        </div>
+                        <div style={{ marginLeft: '2rem' }}>
+                          <span
+                            style={{
+                              marginRight: '0.4rem',
+                              verticalAlign: 'top',
+                            }}
+                          >
+                            Built with
+                          </span>
+                          <a
+                            href="https://www.gatsbyjs.org/showcase/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src={gatsbyLogo}
+                              alt="GatsbyJS"
+                              height="16px"
+                            />
+                          </a>
+                        </div>
+                      </List.Item>
+                      <List.Item>
+                        旧サイト:{' '}
                         <a
-                          href="https://www.gatsbyjs.org/showcase/"
+                          href={`http://www.miyamado-jinja.com`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <img src={gatsbyLogo} alt="GatsbyJS" height="16px" />
-                        </a>
-                      </div>
-                    </div>
+                          http://www.miyamado-jinja.com
+                        </a>{' '}
+                        (ハイフン有)
+                      </List.Item>
+                    </List>
                   </List.Item>
                 </List>
               </Grid.Column>
