@@ -12,7 +12,7 @@ module.exports = {
     email: 'miyamado@m7.cty-net.ne.jp',
     author: 'mnishiguchi',
     facebook:
-      'https://www.facebook.com/pages/%E6%B5%B7%E5%B1%B1%E9%81%93%E7%A5%9E%E7%A4%BE/442688119163715',
+      'https://www.facebook.com/%E6%B5%B7%E5%B1%B1%E9%81%93%E7%A5%9E%E7%A4%BE-137077743078473/',
     instagram: 'https://www.instagram.com/miyamado_shrine/',
   },
   plugins: [
