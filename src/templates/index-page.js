@@ -20,7 +20,7 @@ import GoogleMap from '../components/GoogleMap';
 import OutboundLink from '../components/OutboundLink';
 import miyamadosan from '../img/miyamadosan.svg';
 
-export function IndexPageTemplate({ image, title, description }) {
+export function IndexPageTemplate({ image, title, description, relatedLinks }) {
   const backgroundImageUrl = !!image.childImageSharp
     ? image.childImageSharp.fluid.src
     : image;
@@ -244,6 +244,21 @@ export function IndexPageTemplate({ image, title, description }) {
               </>
             )}
           />
+
+          {relatedLinks.length > 0 && (
+            <Segment padded="very" vertical>
+              <Header as="h2">リンク</Header>
+              <List>
+                {relatedLinks.map((relatedLink, i) => (
+                  <List.Item key={i}>
+                    <OutboundLink href={relatedLink.href}>
+                      {relatedLink.title}
+                    </OutboundLink>
+                  </List.Item>
+                ))}
+              </List>
+            </Segment>
+          )}
         </div>
 
         {/* For desktop, show the Facebook sidebar. */}
@@ -264,6 +279,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   description: PropTypes.string,
+  relatedLinks: PropTypes.array,
 };
 
 function IndexPage({ data }) {
@@ -275,6 +291,7 @@ function IndexPage({ data }) {
         image={frontmatter.image}
         title={frontmatter.title}
         description={frontmatter.description}
+        relatedLinks={frontmatter.relatedLinks}
       />
     </Layout>
   );
@@ -303,6 +320,10 @@ export const pageQuery = graphql`
           }
         }
         description
+        relatedLinks {
+          title
+          href
+        }
       }
     }
   }
