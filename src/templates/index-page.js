@@ -29,7 +29,8 @@ export function IndexPageTemplate({ image, title, description }) {
     <>
       <Media query={{ maxWidth: 991 }}>
         {matches => (
-          <div
+          <Link
+            to={`/honden`}
             style={{
               alignItems: `center`,
               backgroundImage: `url(${backgroundImageUrl})`,
