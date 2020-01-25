@@ -8,7 +8,7 @@ export const FacebookTimeline = ({ title, style = {}, ...rest }) => (
     style={{ overflowY: 'auto', ...style }}
     scrolling="no"
     frameBorder="0"
-    allowTransparency="true"
+    allowtransparency="true"
     allow="encrypted-media"
     title={title}
     {...rest}
