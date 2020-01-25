@@ -1,33 +1,13 @@
 import React from 'react';
 import { withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  List,
-  Segment,
-} from 'semantic-ui-react';
-import Media from 'react-media';
 
 import ResponsiveContainer from './ResponsiveContainer';
-import BackToTopLink from './BackToTopLink';
+import AppFooter from './AppFooter';
 import useSiteMetadata from './useSiteMetadata';
-import LogoLink from './LogoLink';
 
 function TemplateWrapper({ children }) {
-  const {
-    title,
-    description,
-    email,
-    phone,
-    phoneIntl,
-    address,
-    gmap,
-  } = useSiteMetadata();
+  const { title, description } = useSiteMetadata();
   return (
     <ResponsiveContainer>
       {/* prettier-ignore */}
@@ -59,86 +39,7 @@ function TemplateWrapper({ children }) {
 
       <main style={{ minHeight: '80vh' }}>{children}</main>
 
-      <Segment vertical padded="very" style={{ background: '#f5f6f7' }}>
-        <Container>
-          <Header as="h2">お問合せはこちら</Header>
-          <Media query={{ maxWidth: 991 }}>
-            {matches => {
-              return matches ? (
-                <Button.Group fluid>
-                  <Button basic color="blue" as="a" href={`mailto:${email}`}>
-                    <Icon name="mail" />
-                    Eメール
-                  </Button>
-                  <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
-                    <Icon name="phone" /> お電話
-                  </Button>
-                </Button.Group>
-              ) : (
-                <List horizontal divided>
-                  <List.Item>
-                    <strong>電話</strong>: {phone}
-                  </List.Item>
-                  <List.Item>
-                    <strong>Email</strong>: {email}
-                  </List.Item>
-                </List>
-              );
-            }}
-          </Media>
-        </Container>
-      </Segment>
-
-      <Segment as="footer" inverted vertical style={{ padding: '5rem 0' }}>
-        <span
-          style={{
-            position: 'absolute',
-            bottom: '5rem',
-            right: '1rem',
-            zIndex: 2,
-          }}
-        >
-          <BackToTopLink />
-        </span>
-        <Container>
-          <Grid columns="equal" inverted stackable>
-            <Grid.Row>
-              <Grid.Column>
-                <LogoLink width="300px" />
-              </Grid.Column>
-              <Grid.Column>
-                <List as="address" link inverted>
-                  <List.Item>
-                    鎮座地:{' '}
-                    <a href={gmap} target="_blank" rel="noopener noreferrer">
-                      {address}
-                    </a>
-                  </List.Item>
-                  <List.Item>
-                    電話: <a href={`tel:${phoneIntl}`}>{phone}</a>
-                  </List.Item>
-                  <List.Item>
-                    Email: <a href={`mailto:${email}`}>{email}</a>
-                  </List.Item>
-                  <Divider hidden />
-                  <List.Item>
-                    <div
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                      }}
-                    >
-                      <span>
-                        © {new Date().getFullYear()} {title}
-                      </span>
-                    </div>
-                  </List.Item>
-                </List>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </Segment>
+      <AppFooter />
     </ResponsiveContainer>
   );
 }
