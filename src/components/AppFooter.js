@@ -107,7 +107,7 @@ function AppFooter({ children }) {
                         <div>
                           © {new Date().getFullYear()} {title}
                         </div>
-                        <div style={{ marginLeft: '2rem' }}>
+                        <div style={{ marginLeft: '1.5rem' }}>
                           <span
                             style={{
                               marginRight: '0.4rem',
@@ -137,8 +137,7 @@ function AppFooter({ children }) {
                           rel="noopener noreferrer"
                         >
                           http://www.miyamado-jinja.com
-                        </a>{' '}
-                        (ハイフン有)
+                        </a>
                       </List.Item>
                     </List>
                   </List.Item>
