@@ -73,7 +73,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
             <Button basic inverted as="a" href={`tel:${phoneIntl}`}>
               <Icon name="phone" /> お電話
             </Button>
-            <Button basic inverted as="a" href={`mailto:${email}`}>
+            <Button basic inverted as="a" href={`mailto:${email}?subject=ウエブサイトからのお問合せ`}>
               <Icon name="mail" /> Eメール
             </Button>
           </Button.Group>

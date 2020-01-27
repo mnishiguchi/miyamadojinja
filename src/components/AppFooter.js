@@ -27,7 +27,7 @@ function AppFooter({ children }) {
             {matches => {
               return matches ? (
                 <Button.Group fluid>
-                  <Button basic color="blue" as="a" href={`mailto:${email}`}>
+                  <Button basic color="blue" as="a" href={`mailto:${email}?subject=ウエブサイトからのお問合せ`}>
                     <Icon name="mail" />
                     Eメール
                   </Button>
