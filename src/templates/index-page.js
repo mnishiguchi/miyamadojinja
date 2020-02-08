@@ -11,13 +11,13 @@ import {
   Segment,
 } from 'semantic-ui-react';
 import Media from 'react-media';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout from '../components/Layout';
 import KeidaiContent from '../components/KeidaiContent';
 import SocialButtons from '../components/SocialButtons';
 import FacebookTimeline from '../components/FacebookTimeline';
 import GoogleMap from '../components/GoogleMap';
-import OutboundLink from '../components/OutboundLink';
 import miyamadosan from '../img/miyamadosan.svg';
 
 export function IndexPageTemplate({ image, title, description, relatedLinks }) {
