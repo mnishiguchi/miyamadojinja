@@ -17,7 +17,7 @@ import LogoLink from './LogoLink';
 import gatsbyLogo from '../img/gatsby.svg';
 
 function AppFooter({ children }) {
-  const { title, email, phone, phoneIntl, address, gmap } = useSiteMetadata();
+  const { title, email, phone, phoneHref, address, gmap } = useSiteMetadata();
   return (
     <>
       <Segment vertical padded="very" style={{ background: '#f5f6f7' }}>
@@ -31,7 +31,7 @@ function AppFooter({ children }) {
                     <Icon name="mail" />
                     Eメール
                   </Button>
-                  <Button basic color="teal" as="a" href={`tel:${phoneIntl}`}>
+                  <Button basic color="teal" as="a" href={`tel:${phoneHref}`}>
                     <Icon name="phone" /> お電話
                   </Button>
                 </Button.Group>
@@ -78,7 +78,7 @@ function AppFooter({ children }) {
                   <List.Item>
                     電話:{' '}
                     <a
-                      href={`tel:${phoneIntl}`}
+                      href={`tel:${phoneHref}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

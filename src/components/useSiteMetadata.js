@@ -11,7 +11,7 @@ const useSiteMetadata = () => {
             address
             email
             phone
-            phoneIntl
+            phoneHref
             author
             gmap
             facebook

@@ -8,7 +8,7 @@ module.exports = {
     gmap:
       'https://www.google.com/maps/place/Miyamado+Shrine/@34.9430372,136.6211072,18z',
     phone: '059-345-5419',
-    phoneIntl: '+81593455419',
+    phoneHref: '0593455419',
     email: 'miyamado@m7.cty-net.ne.jp',
     author: 'mnishiguchi',
     facebook:

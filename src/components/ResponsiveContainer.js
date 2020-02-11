@@ -24,7 +24,7 @@ const getWidth = () => {
 function ContainerForMobile({ MenuItemsComponent, children }) {
   const [sidebarOpened, setMenuOpened] = React.useState(false);
 
-  const { email, phoneIntl } = useSiteMetadata();
+  const { email, phoneHref } = useSiteMetadata();
 
   const hideSidebar = () => setMenuOpened(false);
   const showSidebar = () => setMenuOpened(true);
@@ -70,7 +70,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
         <Menu.Item>
           <p>お問合せ</p>
           <Button.Group vertical fluid inverted>
-            <Button basic inverted as="a" href={`tel:${phoneIntl}`}>
+            <Button basic inverted as="a" href={`tel:${phoneHref}`}>
               <Icon name="phone" /> お電話
             </Button>
             <Button basic inverted as="a" href={`mailto:${email}?subject=ウエブサイトからのお問合せ`}>
