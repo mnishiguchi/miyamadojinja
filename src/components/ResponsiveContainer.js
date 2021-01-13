@@ -5,21 +5,29 @@ import {
   Button,
   Icon,
   Menu,
-  Responsive,
   Segment,
   Sidebar,
   Visibility,
 } from 'semantic-ui-react';
+import { createMedia } from '@artsy/fresnel';
 
 import NavMenuItems from './NavMenuItems';
 import LogoLink from './LogoLink';
 import SocialButtons from './SocialButtons';
 import useSiteMetadata from './useSiteMetadata';
 
-const getWidth = () => {
-  const isSSR = typeof window === 'undefined';
-  return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
-};
+// https://github.com/artsy/fresnel
+const AppMedia = createMedia({
+  breakpoints: {
+    mobile: 320,
+    tablet: 768,
+    computer: 992,
+    largeScreen: 1200,
+    widescreen: 1920,
+  },
+});
+const mediaStyles = AppMedia.createMediaStyle();
+const { Media, MediaContextProvider } = AppMedia;
 
 function ContainerForMobile({ MenuItemsComponent, children }) {
   const [sidebarOpened, setMenuOpened] = React.useState(false);
@@ -29,13 +37,8 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
   const hideSidebar = () => setMenuOpened(false);
   const showSidebar = () => setMenuOpened(true);
 
-  // Specifiy the breakpoint in maxWidth.
   return (
-    <Responsive
-      as={Sidebar.Pushable}
-      getWidth={getWidth}
-      maxWidth={Responsive.onlyTablet.maxWidth}
-    >
+    <Sidebar.Pushable>
       <Sidebar
         as={Menu}
         animation="overlay"
@@ -111,7 +114,7 @@ function ContainerForMobile({ MenuItemsComponent, children }) {
 
         {children}
       </Sidebar.Pusher>
-    </Responsive>
+    </Sidebar.Pushable>
   );
 }
 
@@ -121,9 +124,8 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
   const hideMenu = () => setMenuOpened(false);
   const showMenu = () => setMenuOpened(true);
 
-  // Specifiy the breakpoint in minWidth.
   return (
-    <Responsive getWidth={getWidth} minWidth={Responsive.onlyComputer.minWidth}>
+    <>
       <Visibility
         once={false}
         onBottomPassed={showMenu}
@@ -153,25 +155,31 @@ function ContainerForDesktop({ MenuItemsComponent, children }) {
           </Menu>
         </Segment>
       </Visibility>
-
       {children}
-    </Responsive>
+    </>
   );
 }
 
-// Adopted from Semantic-Org/Semantic-UI-React example layout.
-// https://github.com/Semantic-Org/Semantic-UI-React/blob/master/docs/src/layouts/HomepageLayout.js
+// https://github.com/Semantic-Org/Semantic-UI-React/pull/4008
+// https://github.com/artsy/fresnel
 export default function ResponsiveContainer({ children }) {
   return (
     <>
-      <ContainerForDesktop
-        MenuItemsComponent={<NavMenuItems />}
-        children={children}
-      />
-      <ContainerForMobile
-        MenuItemsComponent={<NavMenuItems />}
-        children={children}
-      />
+      <style>{mediaStyles}</style>
+      <MediaContextProvider>
+        <Media at="mobile">
+          <ContainerForMobile
+            MenuItemsComponent={<NavMenuItems />}
+            children={children}
+          />
+        </Media>
+        <Media greaterThan="mobile">
+          <ContainerForDesktop
+            MenuItemsComponent={<NavMenuItems />}
+            children={children}
+          />
+        </Media>
+      </MediaContextProvider>
     </>
   );
 }

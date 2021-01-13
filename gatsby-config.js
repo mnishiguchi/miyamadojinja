@@ -77,6 +77,7 @@ module.exports = {
       },
     },
     {
+      // https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `海山道神社`,
@@ -85,6 +86,7 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#000`,
         display: `standalone`,
+        icon: "src/img/logo.svg"
       },
     },
     `gatsby-plugin-advanced-sitemap`,
