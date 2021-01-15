@@ -15,10 +15,9 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import BackToTopLink from './BackToTopLink';
 import useSiteMetadata from './useSiteMetadata';
 import LogoLink from './LogoLink';
-import gatsbyLogo from '../img/gatsby.svg';
 
 function AppFooter({ children }) {
-  const { title, email, phone, phoneHref, address, gmap } = useSiteMetadata();
+  const { email, phone, phoneHref, address, gmap } = useSiteMetadata();
   return (
     <>
       <Segment vertical padded="very" style={{ background: '#f5f6f7' }}>

@@ -28,7 +28,7 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
   return (
     <>
       <Media query={{ maxWidth: 991 }}>
-        {matches => (
+        {(matches) => (
           <Link
             to={`/honden`}
             style={{
@@ -81,23 +81,37 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
                 </Grid.Column>
                 <Grid.Column width={8}>
                   <Header as="h2">洲崎濱宮神明神社 御祭神</Header>
-                  <List
-                    style={{ fontSize: '1.33em' }}
-                    items={[
-                      '面足命',
-                      '天照大御神',
-                      '惶根神',
-                      '仁徳天皇',
-                      '建速須佐之男命',
-                      '宇迦之御魂神',
-                      '大山祇命',
-                      '火之迦具土神',
-                      '菅原道真公',
-                      '火産霊神',
-                      '保食神',
-                      '倭姫命',
-                    ]}
-                  />
+                  <Grid>
+                    <Grid.Row>
+                      <Grid.Column width={8}>
+                        <List
+                          style={{ fontSize: '1.33em' }}
+                          items={[
+                            '面足命',
+                            '天照大御神',
+                            '惶根神',
+                            '仁徳天皇',
+                            '建速須佐之男命',
+                            '宇迦之御魂神',
+                          ]}
+                        />
+                      </Grid.Column>
+
+                      <Grid.Column width={8}>
+                        <List
+                          style={{ fontSize: '1.33em' }}
+                          items={[
+                            '大山祇命',
+                            '火之迦具土神',
+                            '菅原道真公',
+                            '火産霊神',
+                            '保食神',
+                            '倭姫命',
+                          ]}
+                        />
+                      </Grid.Column>
+                    </Grid.Row>
+                  </Grid>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
@@ -128,7 +142,7 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
 
           <Segment padded="very" vertical>
             <Media query={{ maxWidth: 599 }}>
-              {matches => (
+              {(matches) => (
                 <Card.Group
                   centered
                   items={[
@@ -248,7 +262,7 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
           {relatedLinks.length > 0 && (
             <Segment padded="very" vertical>
               <Header as="h2">リンク</Header>
-              <List>
+              <List bulleted horizontal>
                 {relatedLinks.map((relatedLink, i) => (
                   <List.Item key={i}>
                     <OutboundLink href={relatedLink.href}>
