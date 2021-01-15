@@ -19,11 +19,9 @@ import useSiteMetadata from './useSiteMetadata';
 // https://github.com/artsy/fresnel
 const AppMedia = createMedia({
   breakpoints: {
-    mobile: 320,
-    tablet: 768,
-    computer: 992,
-    largeScreen: 1200,
-    widescreen: 1920,
+    sm: 0,
+    lg: 1024,
+    xl: 1200,
   },
 });
 const mediaStyles = AppMedia.createMediaStyle();
@@ -167,13 +165,13 @@ export default function ResponsiveContainer({ children }) {
     <>
       <style>{mediaStyles}</style>
       <MediaContextProvider>
-        <Media at="mobile">
+        <Media at="sm">
           <ContainerForMobile
             MenuItemsComponent={<NavMenuItems />}
             children={children}
           />
         </Media>
-        <Media greaterThan="mobile">
+        <Media greaterThanOrEqual="lg">
           <ContainerForDesktop
             MenuItemsComponent={<NavMenuItems />}
             children={children}
