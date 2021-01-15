@@ -11,7 +11,6 @@ function NavMenuItems() {
       <Menu.Item as={Link} to={'/kitou'} content={`御祈祷`} />
       <Menu.Item as={Link} to={'/wedding'} content={`結婚式`} />
       <Menu.Item as={Link} to={'/omamori'} content={`おふだ・お守り`} />
-      <Menu.Item as={Link} to={'/keidai'} content={`境内`} />
       <Menu.Item as={Link} to={'/annual-events'} content={`行事`} />
     </>
   );

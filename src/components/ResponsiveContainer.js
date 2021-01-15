@@ -21,6 +21,7 @@ const AppMedia = createMedia({
   breakpoints: {
     sm: 0,
     lg: 1024,
+    // This is unused but necessary.
     xl: 1200,
   },
 });

@@ -17,7 +17,7 @@ import useSiteMetadata from './useSiteMetadata';
 import LogoLink from './LogoLink';
 
 function AppFooter({ children }) {
-  const { email, phone, phoneHref, address, gmap } = useSiteMetadata();
+  const { email, phone, phoneHref, address, gmapUrl } = useSiteMetadata();
   return (
     <>
       <Segment vertical padded="very" style={{ background: '#f5f6f7' }}>
@@ -75,7 +75,7 @@ function AppFooter({ children }) {
               <Grid.Column>
                 <List as="address" link inverted>
                   <List.Item>
-                    鎮座地: <OutboundLink href={gmap}>{address}</OutboundLink>
+                    鎮座地: <OutboundLink href={gmapUrl}>{address}</OutboundLink>
                   </List.Item>
                   <List.Item>
                     電話: <a href={`tel:${phoneHref}`}>{phone}</a>

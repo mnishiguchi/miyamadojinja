@@ -13,9 +13,11 @@ const useSiteMetadata = () => {
             phone
             phoneHref
             author
-            gmap
+            gmapUrl
+            directionsUrl
             facebook
             instagram
+            twitter
           }
         }
       }

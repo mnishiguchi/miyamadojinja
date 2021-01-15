@@ -4,10 +4,21 @@ import { Button } from 'semantic-ui-react';
 import useSiteMetadata from './useSiteMetadata';
 
 export default function SocialButtons() {
-  const { facebook, instagram } = useSiteMetadata();
+  const { facebook, instagram, twitter } = useSiteMetadata();
 
   return (
     <>
+      <Button
+        circular
+        size="large"
+        icon="twitter"
+        color="twitter"
+        as="a"
+        href={twitter}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+      <span style={{ marginLeft: '1rem' }}></span>
       <Button
         circular
         size="large"

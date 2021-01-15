@@ -201,7 +201,7 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
                 <OutboundLink href="https://www.kintetsu.co.jp/railway/rosen/A50006.html">
                   近鉄電車
                 </OutboundLink>
-                でお越しのみなさまへ
+                でお越しの場合
               </Header>
               <OutboundLink href="https://ja.wikipedia.org/wiki/%E8%BF%91%E9%89%84%E5%90%8D%E5%8F%A4%E5%B1%8B%E7%B7%9A">
                 近鉄名古屋線
@@ -221,7 +221,7 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
                 <OutboundLink href="https://ja.wikipedia.org/wiki/%E4%BC%8A%E5%8B%A2%E6%B9%BE%E5%B2%B8%E8%87%AA%E5%8B%95%E8%BB%8A%E9%81%93">
                   伊勢湾岸自動車道
                 </OutboundLink>
-                でお越しのみなさまへ
+                でお越しの場合
               </Header>
               <OutboundLink href="https://ja.wikipedia.org/wiki/%E3%81%BF%E3%81%88%E5%B7%9D%E8%B6%8A%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8">
                 みえ川越インターチェンジ
@@ -238,7 +238,7 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
                 <OutboundLink href="https://ja.wikipedia.org/wiki/%E5%90%8D%E9%98%AA%E5%9B%BD%E9%81%93">
                   名阪国道
                 </OutboundLink>
-                でお越しのみなさまへ
+                でお越しの場合
               </Header>
               <OutboundLink href="https://ja.wikipedia.org/wiki/%E4%BA%80%E5%B1%B1%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8">
                 亀山インターチェンジ
