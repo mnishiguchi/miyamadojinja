@@ -8,6 +8,7 @@ import {
   Header,
   Image,
   List,
+  Message,
   Segment,
 } from 'semantic-ui-react';
 import Media from 'react-media';
@@ -47,6 +48,16 @@ export function IndexPageTemplate({ image, title, description, relatedLinks }) {
 
       <Container style={{ display: 'flex' }}>
         <div style={{ flex: 1 }}>
+          {/* TODO: Make this editable from CMS  */}
+          <Segment padded="very" vertical>
+            <Message info header="狐の嫁入り道中は、中止となりました。" />
+            <Message
+              info
+              header="今年、令和3年節分祭2月2日  豆まきは、3回の予定。"
+              content="11時半、13時、15時の予定。変更になる可能性もありますので予めご了承ください。"
+            />
+          </Segment>
+
           <Segment padded="very" vertical>
             <p style={{ fontSize: '1.5rem', lineHeight: '1.7' }}>
               {description}
