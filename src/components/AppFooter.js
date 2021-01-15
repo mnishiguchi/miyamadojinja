@@ -25,7 +25,7 @@ function AppFooter({ children }) {
         <Container>
           <Header as="h2">お問合せはこちら</Header>
           <Media query={{ maxWidth: 991 }}>
-            {matches => {
+            {(matches) => {
               return matches ? (
                 <Button.Group fluid>
                   <Button
@@ -86,41 +86,10 @@ function AppFooter({ children }) {
                   </List.Item>
                   <Divider hidden />
                   <List.Item>
-                    <List as="address" link inverted>
-                      <List.Item
-                        style={{
-                          display: 'flex',
-                          justifyContent: 'flex-start',
-                        }}
-                      >
-                        <div>
-                          © {new Date().getFullYear()} {title}
-                        </div>
-                        <div style={{ marginLeft: '1.5rem' }}>
-                          <span
-                            style={{
-                              marginRight: '0.4rem',
-                              verticalAlign: 'top',
-                            }}
-                          >
-                            Built with
-                          </span>
-                          <OutboundLink href="https://www.gatsbyjs.org/showcase/">
-                            <img
-                              src={gatsbyLogo}
-                              alt="GatsbyJS"
-                              height="16px"
-                            />
-                          </OutboundLink>
-                        </div>
-                      </List.Item>
-                      <List.Item>
-                        旧サイト:{' '}
-                        <OutboundLink href={`http://www.miyamado-jinja.com`}>
-                          http://www.miyamado-jinja.com
-                        </OutboundLink>
-                      </List.Item>
-                    </List>
+                    旧サイト:{' '}
+                    <OutboundLink href={`http://www.miyamado-jinja.com`}>
+                      http://www.miyamado-jinja.com
+                    </OutboundLink>
                   </List.Item>
                 </List>
               </Grid.Column>
